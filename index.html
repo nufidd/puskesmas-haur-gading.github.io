@@ -24,44 +24,55 @@
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <!-- 1. NAVBAR / HEADER -->
-    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
-            <div class="flex items-center space-x-3">
-                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
-                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
-                <div>
-                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
-                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
-                </div>
-                <!-- Widget Jam & Tanggal -->
-                <div class="inline-flex items-center space-x-2 bg-emerald-800/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-medium border border-emerald-600/40">
-                <i class="far fa-clock text-amber-300"></i>
+<!-- 1. NAVBAR / HEADER -->
+<header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+        <div class="flex items-center space-x-3">
+            <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+            <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+            <div>
+                <h1 class="font-bold text-base md:text-lg leading-tight uppercase tracking-wide">PUSKESMAS HAUR GADING</h1>
+                <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+            </div>
+        </div>
+
+        <!-- Menu Navigasi Desktop -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            <a href="index.html" class="text-amber-300 font-bold underline">Beranda</a>
+            <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+            <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+            <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+            <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+            <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+        </nav>
+    </div>
+
+    <!-- SUB-HEADER: WAKTU & INFORMASI (Membuat Tampilan Rapi & Tidak Mepet) -->
+    <div class="bg-emerald-800 text-white text-xs py-1.5 px-4 border-t border-emerald-600/50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center gap-2">
+            <!-- Widget Jam & Tanggal (Sisi Kiri) -->
+            <div class="inline-flex items-center space-x-2 bg-emerald-900/60 text-amber-300 px-3 py-1 rounded-md border border-emerald-600/40 font-medium">
+                <i class="far fa-clock"></i>
                 <span id="live-datetime">Memuat tanggal & waktu...</span>
-                </div>
             </div>
 
-            <!-- Menu Navigasi Desktop -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="index.html" class="text-amber-300 font-bold underline">Beranda</a>
-                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
-                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
-                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
-                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
-                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
-            </nav>
+            <!-- Catatan Jam Pelayanan / Running Text (Sisi Kanan) -->
+            <div class="hidden sm:block text-emerald-100 text-[11px]">
+                <span class="font-bold text-amber-300">Jam Layanan:</span> Senin–Kamis (08.00–12.00 WITA) | Jumat (08.00–10.30 WITA) | Sabtu (08.00–11.30 WITA)
+            </div>
         </div>
+    </div>
 
-        <!-- Menu Mobile Navigasi Ringkas -->
-        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
-            <a href="index.html" class="text-amber-300 font-bold">Beranda</a>
-            <a href="profil.html">Profil</a>
-            <a href="pendaftaran.html">Pendaftaran</a>
-            <a href="berita.html">Berita</a>
-            <a href="pengaduan.html">Aduan</a>
-        </div>
-    </header>
+    <!-- Menu Mobile Navigasi Ringkas -->
+    <div class="md:hidden bg-emerald-900 px-4 py-2 flex justify-between text-xs font-medium border-t border-emerald-800">
+        <a href="index.html" class="text-amber-300 font-bold">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="pendaftaran.html">Pendaftaran</a>
+        <a href="berita.html">Berita</a>
+        <a href="pengaduan.html">Aduan</a>
+    </div>
+</header>
 
     <!-- 2. TEKS BERJALAN / RUNNING TEXT PENGUMUMAN -->
     <div class="bg-amber-400 text-emerald-950 font-medium text-xs md:text-sm py-2 shadow-inner border-b border-amber-500 overflow-hidden flex items-center">

@@ -35,6 +35,11 @@
                     <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
                     <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
                 </div>
+                <!-- Widget Jam & Tanggal -->
+                <div class="inline-flex items-center space-x-2 bg-emerald-800/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-medium border border-emerald-600/40">
+                <i class="far fa-clock text-amber-300"></i>
+                <span id="live-datetime">Memuat tanggal & waktu...</span>
+                </div>
             </div>
 
             <!-- Menu Navigasi Desktop -->
@@ -293,6 +298,33 @@
             }
         });
     </script>
+<script>
+    function updateWaktu() {
+        const sekarang = new Date();
 
+        // Format Tanggal Bahasa Indonesia
+        const opsiTanggal = { 
+            weekday: 'long', 
+            day: 'numeric', 
+            month: 'long', 
+            year: 'numeric' 
+        };
+        const tanggalStr = sekarang.toLocaleDateString('id-ID', opsiTanggal);
+
+        // Format Jam, Menit, Detik (WITA)
+        const jam = String(sekarang.getHours()).padStart(2, '0');
+        const menit = String(sekarang.getMinutes()).padStart(2, '0');
+        const detik = String(sekarang.getSeconds()).padStart(2, '0');
+
+        // Tampilkan ke dalam elemen HTML
+        document.getElementById('live-datetime').innerText = `${tanggalStr} | ${jam}:${menit}:${detik} WITA`;
+    }
+
+    // Jalankan fungsi pertama kali
+    updateWaktu();
+
+    // Perbarui waktu setiap 1 detik (1000 ms)
+    setInterval(updateWaktu, 1000);
+</script>
 </body>
 </html>

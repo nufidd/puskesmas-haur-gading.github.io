@@ -73,24 +73,23 @@
 
             <div class="grid md:grid-cols-3 gap-6">
 
-                <!-- Kartu Berita 1 -->
-<article class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition">
-    <a href="detail-skm.html" class="block h-full flex flex-col justify-between">
-        <div>
-            <img src="assets/skm.png" alt="Hasil SKM" class="w-full h-44 object-cover bg-gray-200">
-            <div class="p-4">
-                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded">Hasil SKM</span>
-                <h4 class="font-bold text-sm text-gray-800 mt-2 leading-snug hover:text-emerald-700">Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading</h4>
-                <p class="text-xs text-gray-400 mt-1">20 Agustus 2026</p>
-                <p class="text-xs text-gray-600 mt-2 line-clamp-3">
-                    Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading Semester I Tahun 2025...
-                </p>
-            </div>
+                <!-- Kartu Berita 1 (Hasil SKM) -->
+<article onclick="bukaModal('Hasil SKM', '20 Agustus 2026', 'assets/skm.png', 'Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading', 'Berdasarkan Peraturan Menteri PANRB Nomor 14 Tahun 2017, UPTD Puskesmas Haur Gading telah menyelesaikan rekapitulasi penilaian SKM Periode Semester I Tahun 2026. Dari hasil pengolahan data kuesioner masyarakat dan pasien, diperoleh nilai Indeks Kepuasan Masyarakat (IKM) sebesar 82,13 dengan Mutu Pelayanan B (SANGAT BAIK). Terima kasih atas kepercayaan dan masukan dari seluruh masyarakat Kecamatan Haur Gading.')" 
+class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition cursor-pointer group">
+    <div>
+        <img src="assets/skm.png" alt="Hasil SKM" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
+        <div class="p-4">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded">Hasil SKM</span>
+            <h4 class="font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading</h4>
+            <p class="text-xs text-gray-400 mt-1">20 Agustus 2026</p>
+            <p class="text-xs text-gray-600 mt-2 line-clamp-3">
+                Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading Semester I Tahun 2026 Berdasarkan Peraturan Pemerintah...
+            </p>
         </div>
-        <div class="p-4 pt-0">
-            <span class="text-emerald-700 text-xs font-bold hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
-        </div>
-    </a>
+    </div>
+    <div class="p-4 pt-0">
+        <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
+    </div>
 </article>
 
                 <!-- Kartu Berita 2 -->
@@ -160,6 +159,58 @@
             &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
         </div>
     </footer>
+<!-- KODE POP-UP MODAL (BERITA) -->
+    <div id="modalBerita" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all">
+            
+            <!-- Header Modal & Tombol Tutup -->
+            <div class="p-4 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white z-10">
+                <span id="modalKategori" class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Kategori</span>
+                <button onclick="tutupModal()" class="text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 w-8 h-8 rounded-full flex items-center justify-center font-bold transition">&times;</button>
+            </div>
 
+            <!-- Gambar Berita Modal -->
+            <img id="modalGambar" src="" alt="Foto Berita" class="w-full h-60 object-cover">
+
+            <!-- Isi Konten Modal -->
+            <div class="p-6">
+                <p id="modalTanggal" class="text-xs text-gray-400 mb-2"></p>
+                <h3 id="modalJudul" class="text-xl font-bold text-gray-800 mb-4 leading-snug"></h3>
+                <p id="modalIsi" class="text-sm text-gray-600 leading-relaxed whitespace-pre-line"></p>
+            </div>
+
+            <!-- Footer Modal -->
+            <div class="p-4 bg-gray-50 border-t border-gray-100 flex justify-end">
+                <button onclick="tutupModal()" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-5 py-2.5 rounded-lg transition">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT POP-UP -->
+    <script>
+        function bukaModal(kategori, tanggal, gambar, judul, isi) {
+            document.getElementById('modalKategori').innerText = kategori;
+            document.getElementById('modalTanggal').innerText = tanggal;
+            document.getElementById('modalGambar').src = gambar;
+            document.getElementById('modalJudul').innerText = judul;
+            document.getElementById('modalIsi').innerText = isi;
+            
+            document.getElementById('modalBerita').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Matikan scroll background
+        }
+
+        function tutupModal() {
+            document.getElementById('modalBerita').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Aktifkan kembali scroll
+        }
+
+        // Tutup modal jika mengklik area luar gambar/teks
+        window.onclick = function(event) {
+            const modal = document.getElementById('modalBerita');
+            if (event.target === modal) {
+                tutupModal();
+            }
+        }
+    </script>
 </body>
 </html>

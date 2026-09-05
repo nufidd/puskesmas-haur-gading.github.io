@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPTD Puskesmas Haur Gading - Kabupaten Hulu Sungai Utara</title>
+    <!-- Framework Tampilan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animasi Kustom Teks Berjalan */
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 45s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR / HEADER -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="text-amber-300 font-bold underline">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+
+        <!-- Menu Mobile Navigasi Ringkas -->
+        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
+            <a href="index.html" class="text-amber-300 font-bold">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Aduan</a>
+        </div>
+    </header>
+
+    <!-- 2. TEKS BERJALAN / RUNNING TEXT PENGUMUMAN -->
+    <div class="bg-amber-400 text-emerald-950 font-medium text-xs md:text-sm py-2 shadow-inner border-b border-amber-500 overflow-hidden flex items-center">
+        <div class="bg-emerald-800 text-white font-bold px-3 py-1 text-[11px] rounded-r-md uppercase tracking-wider shrink-0 shadow-sm z-10 flex items-center space-x-1">
+            <span>📢 PENGUMUMAN</span>
+        </div>
+        <div class="overflow-hidden w-full relative">
+            <div class="animate-marquee font-semibold">
+                🔔 Selamat Datang di Website Resmi UPTD Puskesmas Haur Gading &nbsp; | &nbsp; 
+                📌 Jam Pelayanan: Senin - Kamis (08.00 - 12.00 WITA), Jumat (08.00 - 10.30 WITA), Sabtu (08.00 - 11.30 WITA) &nbsp; | &nbsp; 
+                📲 Gunakan aplikasi Mobile JKN untuk pendaftaran antrean secara online tanpa harus menunggu lama! &nbsp; | &nbsp; 
+                🩺 Posyandu Balita & Lansia dilaksanakan rutin setiap bulan di masing-masing desa.
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. HERO SECTION / GAMBAR GEDUNG -->
+    <section class="relative bg-emerald-900 text-white overflow-hidden">
+        <div class="container mx-auto px-4 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4 z-10">
+                <span class="bg-amber-400 text-emerald-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider inline-block">
+                    Selamat Datang
+                </span>
+                <h2 class="text-2xl md:text-4xl font-extrabold leading-tight">
+                    Pelayanan Kesehatan Primer yang Profesional & Terjangkau
+                </h2>
+                <p class="text-xs md:text-sm text-emerald-100 leading-relaxed">
+                    Website Resmi UPTD Puskesmas Haur Gading. Memberikan kemudahan informasi pendaftaran, layanan kesehatan, berita kegiatan, serta saluran pengaduan masyarakat.
+                </p>
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <a href="pendaftaran.html" class="bg-amber-400 hover:bg-amber-500 text-emerald-950 font-bold px-5 py-2.5 rounded-lg text-xs md:text-sm shadow-md transition">
+                        Cara Pendaftaran Online
+                    </a>
+                    <a href="pengaduan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-lg text-xs md:text-sm border border-emerald-500 transition">
+                        Formulir Aduan
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                    <img src="assets/gedung-puskesmas.png" alt="Gedung Puskesmas Haur Gading" class="w-full h-56 md:h-72 object-cover" onerror="this.src='Gedung Puskesmas.png'">
+                </div>
+                <p class="text-center text-xs text-emerald-200 mt-2 italic">Gedung UPTD Puskesmas Haur Gading, Kabupaten Hulu Sungai Utara</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SLIDER BERITA OTOMATIS MENGAMBIL DATA DARI BERITA.HTML -->
+    <section class="bg-white py-10 border-b border-gray-200">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex justify-between items-end mb-6">
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold text-emerald-800">Berita & Kegiatan Terkini</h3>
+                    <p class="text-xs md:text-sm text-gray-500 mt-1">Informasi dan edukasi kesehatan terbaru dari Puskesmas</p>
+                </div>
+                <a href="berita.html" class="text-xs md:text-sm font-bold text-emerald-700 hover:underline flex items-center">
+                    Lihat Semua Berita &rarr;
+                </a>
+            </div>
+
+            <!-- Container Slider (Konten diisi otomatis via JS) -->
+            <div class="relative overflow-hidden rounded-2xl bg-gray-100 shadow-md min-h-[250px] flex items-center justify-center">
+                <div id="news-slider" class="flex w-full transition-transform duration-500 ease-in-out">
+                    <p class="p-6 text-xs text-gray-400 italic mx-auto">Memuat berita terbaru...</p>
+                </div>
+
+                <!-- Tombol Navigasi Slider -->
+                <button id="prevSlide" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition z-10">
+                    &#10094;
+                </button>
+                <button id="nextSlide" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition z-10">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LAYANAN UNGGULAN -->
+    <main class="container mx-auto px-4 my-10 max-w-5xl flex-grow space-y-10">
+        <section>
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <h3 class="text-xl md:text-2xl font-bold text-emerald-800">Layanan Unggulan Kami</h3>
+                <p class="text-xs md:text-sm text-gray-600 mt-1">Sistem pelayanan kesehatan terintegrasi untuk masyarakat Haur Gading</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Kartu 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        1
+                    </div>
+                    <h4 class="font-bold text-emerald-900 mb-2">Antrean Online & Digital</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                        Daftar berobat tanpa antre panjang melalui aplikasi Mobile JKN serta pencatatan terintegrasi ePuskesmas.
+                    </p>
+                    <a href="pendaftaran.html" class="text-emerald-700 font-bold text-xs hover:underline">Panduan Pendaftaran &rarr;</a>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        2
+                    </div>
+                    <h4 class="font-bold text-emerald-900 mb-2">Pemeriksaan & Posyandu</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                        Pelayanan Poli Umum, KIA/KB, Gizi, Sanitasi, serta Posyandu Balita & Lansia rutin di seluruh desa.
+                    </p>
+                    <a href="profil.html" class="text-emerald-700 font-bold text-xs hover:underline">Lihat Profil Instansi &rarr;</a>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                        3
+                    </div>
+                    <h4 class="font-bold text-emerald-900 mb-2">Pengaduan Masyarakat</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                        Sampaikan kritik, saran, maupun pertanyaan secara langsung melalui hotline WhatsApp dan QR Code Form.
+                    </p>
+                    <a href="pengaduan.html" class="text-emerald-700 font-bold text-xs hover:underline">Kirim Aduan &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. FOOTER / KONTAK -->
+    <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
+                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
+                <p class="text-xs text-emerald-200">WhatsApp Aduan: 0812-3456-7890</p>
+                <p class="text-xs text-emerald-200">Email: puskesmas.haurgading@gmail.com</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Navigasi Utama</h5>
+                <div class="flex flex-col space-y-1 text-xs text-emerald-200">
+                    <a href="profil.html" class="hover:underline">Profil Instansi</a>
+                    <a href="pendaftaran.html" class="hover:underline">Panduan Mobile JKN & ePuskesmas</a>
+                    <a href="pengaduan.html" class="hover:underline">Formulir Aduan</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
+            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPT OTOMATIS: MENGAMBIL KONTEN BERITA DARI BERITA.HTML -->
+    <script>
+        const slider = document.getElementById('news-slider');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        
+        let currentIndex = 0;
+        let totalSlides = 0;
+
+        // Fungsi membaca isi file berita.html
+        fetch('berita.html')
+            .then(response => response.text())
+            .then(htmlText => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                // Mengambil elemen kartu berita (berita-item) dari berita.html
+                const articles = doc.querySelectorAll('.berita-item');
+                
+                if (articles.length === 0) {
+                    slider.innerHTML = '<p class="p-6 text-xs text-gray-500 italic mx-auto">Belum ada berita yang tersedia.</p>';
+                    return;
+                }
+
+                slider.innerHTML = ''; 
+                
+                // Mengambil maksimal 5 berita terbaru untuk dijadikan slide
+                const maxNews = Math.min(articles.length, 5);
+                totalSlides = maxNews;
+
+                for (let i = 0; i < maxNews; i++) {
+                    const art = articles[i];
+                    
+                    // Ambil detail berita
+                    const img = art.querySelector('img')?.src || 'assets/gedung-puskesmas.png';
+                    const category = art.querySelector('.berita-kategori')?.innerText || 'Informasi';
+                    const title = art.querySelector('.berita-judul')?.innerText || 'Judul Berita';
+                    const desc = art.querySelector('.berita-deskripsi')?.innerText || '';
+
+                    // Buat struktur slide
+                    const slideHTML = `
+                        <div class="w-full shrink-0 grid md:grid-cols-2 bg-white">
+                            <img src="${img}" alt="${title}" class="w-full h-56 md:h-72 object-cover">
+                            <div class="p-6 flex flex-col justify-center space-y-3">
+                                <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded w-max">${category}</span>
+                                <h4 class="text-lg md:text-xl font-bold text-gray-800">${title}</h4>
+                                <p class="text-xs md:text-sm text-gray-600 line-clamp-3">${desc}</p>
+                                <a href="berita.html" class="text-xs font-bold text-amber-600 hover:text-amber-700 pt-2">Baca Selengkapnya &rarr;</a>
+                            </div>
+                        </div>
+                    `;
+                    slider.innerHTML += slideHTML;
+                }
+
+                // Jalankan interval slide
+                setInterval(() => {
+                    if(totalSlides > 0) {
+                        currentIndex = (currentIndex + 1) % totalSlides;
+                        updateSlider();
+                    }
+                }, 5000);
+            })
+            .catch(err => {
+                slider.innerHTML = '<p class="p-6 text-xs text-gray-500 italic mx-auto">Gagal memuat slide berita.</p>';
+            });
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if(totalSlides > 0) {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if(totalSlides > 0) {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+        });
+    </script>
+
+</body>
+</html>

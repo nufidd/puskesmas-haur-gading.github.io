@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Dokumentasi - UPTD Puskesmas Haur Gading</title>
+    <!-- Framework Tampilan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR / HEADER -->
+<!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+
+        <!-- Menu Mobile Navigasi Ringkas -->
+        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Aduan</a>
+        </div>
+    </header>
+
+    <!-- 2. BANNER HALAMAN -->
+    <section class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold">Galeri Dokumentasi</h2>
+        <p class="text-xs md:text-sm text-emerald-100 mt-1">Dokumentasi foto kegiatan program kesehatan dan pelayanan lapangan</p>
+    </section>
+
+    <!-- 3. KONTEN UTAMA GALERI -->
+    <main class="container mx-auto px-4 my-8 max-w-5xl flex-grow space-y-8">
+
+        <!-- Grid Foto Dokumentasi -->
+        <section>
+            <h3 class="text-xl font-bold text-emerald-800 mb-6">Foto Kegiatan Lapangan</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                <!-- Item Foto 1 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri1.jpg" alt="Pemeriksaan Jentik" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Kesling'">
+                    <div class="p-3 text-center">
+                        <h4 class="font-bold text-sm text-gray-800">Inspeksi Kesehatan Lingkungan</h4>
+                        <p class="text-xs text-gray-500 mt-1">Pemeriksaan jentik berkala oleh tim sanitasi</p>
+                    </div>
+                </div>
+
+                <!-- Item Foto 2 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri2.jpg" alt="Posyandu Balita" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Posyandu'">
+                    <div class="p-3 text-center">
+                        <h4 class="font-bold text-sm text-gray-800">Pelayanan Posyandu Integrasi</h4>
+                        <p class="text-xs text-gray-500 mt-1">Penimbangan balita dan pemberian vitamin A</p>
+                    </div>
+                </div>
+
+                <!-- Item Foto 3 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri3.jpg" alt="Lokakarya Mini" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Lokmin'">
+                    <div class="p-3 text-center">
+                        <h4 class="font-bold text-sm text-gray-800">Lokakarya Mini Lintas Sektor</h4>
+                        <p class="text-xs text-gray-500 mt-1">Koordinasi program kerja bersama aparat kecamatan</p>
+                    </div>
+                </div>
+
+                <!-- Item Foto 4 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri4.jpg" alt="Pemeriksaan Lansia" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Lansia'">
+                    <div class="p-3 text-center">
+                        <h4 class="font-bold text-sm text-gray-800">Posyandu Lansia Mandiri</h4>
+                        <p class="text-xs text-gray-500 mt-1">Pemeriksaan kesehatan rutin untuk para lansia</p>
+                    </div>
+                </div>
+
+                <!-- Item Foto 5 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri5.jpg" alt="Penyuluhan Sekolah" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Penyuluhan'">
+                    <div class="p-3 text-center">
+                        <h4 class="font-bold text-sm text-gray-800">Edukasi Kesehatan Remaja</h4>
+                        <p class="text-xs text-gray-500 mt-1">Penyuluhan gizi seimbang di sekolah menengah</p>
+                    </div>
+                </div>
+
+                <!-- Item Foto 6 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri6.jpg" alt="Puskesmas Keliling" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Pusling'">
+                    <div class="p-3 text-center">
+                        <h4 class="font-bold text-sm text-gray-800">Pelayanan Puskesmas Keliling</h4>
+                        <p class="text-xs text-gray-500 mt-1">Jemput bola pelayanan kesehatan ke desa terpencil</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tautan ke Media Sosial -->
+        <section class="bg-emerald-50 border border-emerald-200 p-6 rounded-xl text-center max-w-2xl mx-auto">
+            <h4 class="font-bold text-emerald-900 mb-1">Ingin Melihat Dokumentasi Harian Lengkap?</h4>
+            <p class="text-xs text-gray-600 mb-4">Kunjungi dan ikuti akun media sosial resmi UPTD Puskesmas Haur Gading untuk pembaruan kegiatan terkini.</p>
+            <div class="flex justify-center gap-3">
+                <a href="https://instagram.com/" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-lg text-xs transition">
+                    Instagram Resmi
+                </a>
+                <a href="https://facebook.com/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg text-xs transition">
+                    Facebook Page
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FOOTER / KONTAK -->
+    <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
+                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
+                <p class="text-xs text-emerald-200">WhatsApp Aduan: 0812-3456-7890</p>
+                <p class="text-xs text-emerald-200">Email: puskesmas.haurgading@gmail.com</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Navigasi</h5>
+                <div class="flex flex-col space-y-1 text-xs text-emerald-200">
+                    <a href="index.html" class="hover:underline">Beranda</a>
+                    <a href="profil.html" class="hover:underline">Profil Instansi</a>
+                    <a href="pendaftaran.html" class="hover:underline">Panduan Mobile JKN</a>
+                    <a href="pengaduan.html" class="hover:underline">Formulir Aduan</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
+            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

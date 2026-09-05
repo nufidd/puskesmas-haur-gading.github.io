@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saran & Pengaduan - UPTD Puskesmas Haur Gading</title>
+    <!-- Framework Tampilan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR / HEADER -->
+<!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+
+        <!-- Menu Mobile Navigasi Ringkas -->
+        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Aduan</a>
+        </div>
+    </header>
+
+    <!-- 2. BANNER HALAMAN -->
+    <section class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold">Layanan Pengaduan & Aspirasi</h2>
+        <p class="text-xs md:text-sm text-emerald-100 mt-1">Sampaikan masukan, saran, dan masukan Anda untuk peningkatan kualitas layanan kami</p>
+    </section>
+
+    <!-- 3. KONTEN UTAMA PENGADUAN -->
+    <main class="container mx-auto px-4 my-8 max-w-4xl flex-grow space-y-8">
+
+        <!-- Grid 2 Opsi Pengaduan -->
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- Opsi 1: WhatsApp Hotline -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="p-3 bg-green-100 text-green-600 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Aduan via WhatsApp</h3>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-4">Layanan respon cepat melalui pesan WhatsApp resmi Puskesmas Haur Gading.</p>
+                    
+                    <div class="bg-gray-50 p-3 rounded-lg border text-xs space-y-1 mb-4">
+                        <p class="font-semibold text-gray-700">Nomor Hotline Aduan:</p>
+                        <p class="text-emerald-700 font-bold text-base">0812-3456-7890</p>
+                        <p class="text-gray-500">Jam Layanan: Senin – Sabtu (08.00 – 14.00 WITA)</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Puskesmas%20Haur%20Gading,%20saya%20ingin%20menyampaikan%20pengaduan:" 
+                   target="_blank" 
+                   class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-4 rounded-lg text-center text-xs block transition">
+                    Chat WhatsApp Sekarang
+                </a>
+            </div>
+
+            <!-- Opsi 2: Link Google Form & QR Code -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="p-3 bg-blue-100 text-blue-600 rounded-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1.012 0 01.707.293l5.414 5.414a1.012 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Formulir / QR Code Aduan</h3>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-2">Isi formulir pengaduan online secara mandiri atau scan QR Code di bawah ini.</p>
+                    
+                    <!-- QR Code Pengaduan -->
+                    <div class="text-center my-2 p-2 bg-gray-50 rounded-lg border">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://bit.ly/AduanPuskesmasHaurGading" alt="QR Code Pengaduan" class="mx-auto rounded border bg-white p-1">
+                        <span class="text-[10px] text-gray-500 mt-1 block">Scan QR Code untuk membuka form</span>
+                    </div>
+                </div>
+
+                <a href="https://bit.ly/AduanPuskesmasHaurGading" 
+                   target="_blank" 
+                   class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg text-center text-xs block transition mt-2">
+                    Buka Form Pengaduan Online
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Alur Penanganan Pengaduan -->
+        <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="text-lg font-bold text-emerald-800 mb-4 border-b-2 border-emerald-500 pb-2">Alur Penanganan Pengaduan Masyarakat</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div class="p-3 bg-emerald-50 border-l-4 border-emerald-600 rounded-r-lg">
+                    <p class="font-bold text-emerald-900 mb-1">1. Penerimaan Aduan</p>
+                    <p class="text-gray-600">Pengaduan masuk melalui WhatsApp atau Form Online dicatat oleh Tim Pengaduan Puskesmas.</p>
+                </div>
+                <div class="p-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
+                    <p class="font-bold text-amber-900 mb-1">2. Verifikasi & Tindak Lanjut</p>
+                    <p class="text-gray-600">Tim menelaah aduan dan melakukan konfirmasi internal ke penanggung jawab unit terkait.</p>
+                </div>
+                <div class="p-3 bg-blue-50 border-l-4 border-blue-600 rounded-r-lg">
+                    <p class="font-bold text-blue-900 mb-1">3. Umpan Balik / Penyelesaian</p>
+                    <p class="text-gray-600">Hasil tindak lanjut dan solusi disampaikan kembali kepada masyarakat pelapor.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FOOTER / KONTAK -->
+    <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
+                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
+                <p class="text-xs text-emerald-200">WhatsApp Aduan: 0812-3456-7890</p>
+                <p class="text-xs text-emerald-200">Email: puskesmas.haurgading@gmail.com</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Navigasi</h5>
+                <div class="flex flex-col space-y-1 text-xs text-emerald-200">
+                    <a href="index.html" class="hover:underline">Beranda</a>
+                    <a href="profil.html" class="hover:underline">Profil Instansi</a>
+                    <a href="pendaftaran.html" class="hover:underline">Panduan Mobile JKN</a>
+                    <a href="berita.html" class="hover:underline">Berita & Pengumuman</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
+            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alur Pendaftaran - UPTD Puskesmas Haur Gading</title>
+    <!-- Framework Tampilan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR / HEADER -->
+<!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+
+        <!-- Menu Mobile Navigasi Ringkas -->
+        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Aduan</a>
+        </div>
+    </header>
+
+    <!-- 2. BANNER HALAMAN -->
+    <section class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold">Informasi & Tata Cara Pendaftaran</h2>
+        <p class="text-xs md:text-sm text-emerald-100 mt-1">Panduan berobat bagi pasien BPJS dan Pasien Umum</p>
+    </section>
+
+    <!-- 3. KONTEN UTAMA PENDAFTARAN -->
+    <main class="container mx-auto px-4 my-8 max-w-4xl flex-grow space-y-8">
+
+        <!-- Kartu Jam Operational Loket -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl shadow-sm flex items-start space-x-3">
+            <div class="p-2 bg-amber-500 text-white rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <div class="text-sm">
+                <h3 class="font-bold text-gray-800">Jam Operasional Loket Pendaftaran (ePuskesmas):</h3>
+                <p class="text-gray-600 mt-1"><strong>Senin – Kamis:</strong> 08.00 – 01.00 WITA | <strong>Jumat:</strong> 08.00 – 10.30 WITA | <strong></p>
+            </div>
+        </div>
+
+        <!-- Grid 2 Opsi Pendaftaran -->
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- Opsi 1: Mobile JKN -->
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-sm">1</span>
+                        <h3 class="text-lg font-bold text-blue-900">Online via Mobile JKN</h3>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-4">Khusus peserta BPJS Kesehatan untuk mengambil nomor antrean dari rumah tanpa perlu mengantre lama.</p>
+                    
+                    <h4 class="font-semibold text-xs text-gray-800 uppercase tracking-wider mb-2">Langkah Pendaftaran:</h4>
+                    <ol class="list-decimal list-inside text-xs text-gray-600 space-y-2">
+                        <li>Buka aplikasi <strong>Mobile JKN</strong> di HP Anda.</li>
+                        <li>Pilih menu <strong>Pendaftaran Pelayanan (Antrean)</strong>.</li>
+                        <li>Pilih tab <strong>Faskes Tingkat Pertama</strong>.</li>
+                        <li>Pilih Poli Tujuan dan tanggal rencana berobat.</li>
+                        <li>Isi keluhan singkat, lalu klik <strong>Simpan</strong>.</li>
+                        <li>Tunjukkan nomor/kode antrean di HP kepada petugas loket saat tiba di Puskesmas.</li>
+                    </ol>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-100">
+                    <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile" target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition">
+                        Unduh Aplikasi Mobile JKN
+                    </a>
+                </div>
+            </div>
+
+            <!-- Opsi 2: ePuskesmas On-Site -->
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-600 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-full text-sm">2</span>
+                        <h3 class="text-lg font-bold text-emerald-900">Langsung di Tempat (On-Site)</h3>
+                    </div>
+                    <p class="text-xs text-gray-600 mb-4">Pendaftaran langsung di loket Puskesmas yang akan diinput oleh petugas ke dalam sistem <strong>ePuskesmas</strong>.</p>
+                    
+                    <h4 class="font-semibold text-xs text-gray-800 uppercase tracking-wider mb-2">Persyaratan Dokumen:</h4>
+                    <ul class="list-disc list-inside text-xs text-gray-600 space-y-1 mb-4">
+                        <li>KTP / Kartu Keluarga (KK)</li>
+                        <li>Kartu BPJS Kesehatan (jika ada)</li>
+                        <li>Kartu Berobat Pasien (pasien lama)</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-xs text-gray-800 uppercase tracking-wider mb-2">Langkah Pendaftaran:</h4>
+                    <ol class="list-decimal list-inside text-xs text-gray-600 space-y-2">
+                        <li>Datang ke Puskesmas Haur Gading sesuai jam pendaftaran.</li>
+                        <li>Ambil nomor antrean fisik di lokasi.</li>
+                        <li>Serahkan dokumen persyaratan ke petugas loket saat dipanggil.</li>
+                        <li>Petugas akan mencatat data Anda ke sistem **ePuskesmas**.</li>
+                        <li>Silakan menunggu di ruang tunggu poli yang dituju.</li>
+                    </ol>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-100">
+                    <div class="bg-emerald-50 p-2 rounded text-center text-xs text-emerald-800 font-medium">
+                        Melayani Pasien BPJS & Pasien Umum
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Alur Pelayanan Pasien -->
+        <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="text-lg font-bold text-emerald-800 mb-4 border-b-2 border-emerald-500 pb-2">Alur Pelayanan Pasien di Puskesmas</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-xs">
+                <div class="p-3 bg-gray-50 rounded-lg border">
+                    <div class="font-bold text-emerald-700 text-sm mb-1">1. Loket</div>
+                    <p class="text-gray-600">Pendaftaran & Verifikasi Berkas (ePuskesmas)</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-lg border">
+                    <div class="font-bold text-emerald-700 text-sm mb-1">2. Poli Tujuan</div>
+                    <p class="text-gray-600">Pemeriksaan Dokter & Tanda Vital</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-lg border">
+                    <div class="font-bold text-emerald-700 text-sm mb-1">3. Lab / Penunjang</div>
+                    <p class="text-gray-600">Pemeriksaan Spesimen (jika ada instruksi dokter)</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-lg border">
+                    <div class="font-bold text-emerald-700 text-sm mb-1">4. Farmasi / Kasir</div>
+                    <p class="text-gray-600">Pengambilan Obat & Penyelesaian Administrasi</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FOOTER / KONTAK -->
+    <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
+                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
+                <p class="text-xs text-emerald-200">WhatsApp Aduan: 0812-3456-7890</p>
+                <p class="text-xs text-emerald-200">Email: puskesmas.haurgading@gmail.com</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Navigasi</h5>
+                <div class="flex flex-col space-y-1 text-xs text-emerald-200">
+                    <a href="index.html" class="hover:underline">Beranda</a>
+                    <a href="profil.html" class="hover:underline">Profil Instansi</a>
+                    <a href="pengaduan.html" class="hover:underline">Formulir Aduan</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
+            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

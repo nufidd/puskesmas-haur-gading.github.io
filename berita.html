@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Informasi - UPTD Puskesmas Haur Gading</title>
+    <!-- Framework Tampilan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR / HEADER -->
+<!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+
+        <!-- Menu Mobile Navigasi Ringkas -->
+        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Aduan</a>
+        </div>
+    </header>
+
+    <!-- 2. BANNER HALAMAN -->
+    <section class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold">Berita & Informasi Publik</h2>
+        <p class="text-xs md:text-sm text-emerald-100 mt-1">Kumpulan berita kegiatan, edukasi kesehatan, dan pengumuman resmi</p>
+    </section>
+
+    <!-- 3. KONTEN UTAMA BERITA -->
+    <main class="container mx-auto px-4 my-8 max-w-5xl flex-grow space-y-8">
+
+        <!-- Bagian Pengumuman Penting -->
+        <section>
+            <h3 class="text-xl font-bold text-emerald-800 mb-4 flex items-center">
+                <span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded mr-2">PENTING</span> Pengumuman Terbaru
+            </h3>
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-sm space-y-2">
+                <span class="text-xs text-amber-800 font-semibold">Dipublikasikan: 1 September 2026</span>
+                <h4 class="font-bold text-base text-gray-800">Jadwal Pelayanan PIN Polio & Posyandu Balita Wilayah Kerja Puskesmas</h4>
+                <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    Diberitahukan kepada seluruh warga Kecamatan Haur Gading, pelaksanaan imunisasi serentak dan penimbangan balita rutin akan dilaksanakan di seluruh Posyandu desa mulai tanggal 10 September 2026. Harap membawa Buku KIA anak saat berkunjung.
+                </p>
+            </div>
+        </section>
+
+        <!-- Daftar Kartu Berita -->
+        <section>
+            <h3 class="text-xl font-bold text-emerald-800 mb-6">Berita Kegiatan Terbaru</h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Kartu Berita 1 -->
+                <article class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <img src="assets/foto-kegiatan/posyandu.jpg" alt="Foto Kegiatan Posyandu" class="w-full h-44 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x250?text=Foto+Posyandu'">
+                        <div class="p-4">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded">Kegiatan UKM</span>
+                            <h4 class="font-bold text-sm text-gray-800 mt-2 leading-snug hover:text-emerald-700">Pemberian Makanan Tambahan (PMT) Balita Stunting di Desa Haur Gading</h4>
+                            <p class="text-xs text-gray-400 mt-1">20 Agustus 2026</p>
+                            <p class="text-xs text-gray-600 mt-2 line-clamp-3">
+                                Petugas Gizi Puskesmas Haur Gading menyerahkan paket PMT lokal berbasis bahan pangan daerah guna meningkatkan status gizi anak balita...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="#" class="text-emerald-700 text-xs font-bold hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Kartu Berita 2 -->
+                <article class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <img src="assets/foto-kegiatan/penyuluhan.jpg" alt="Foto Penyuluhan Kesehatan" class="w-full h-44 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x250?text=Foto+Penyuluhan'">
+                        <div class="p-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded">Edukasi</span>
+                            <h4 class="font-bold text-sm text-gray-800 mt-2 leading-snug hover:text-emerald-700">Sosialisasi Pencegahan Demam Berdarah (DBD) di Sekolah Dasar</h4>
+                            <p class="text-xs text-gray-400 mt-1">12 Agustus 2026</p>
+                            <p class="text-xs text-gray-600 mt-2 line-clamp-3">
+                                Tim Kesehatan Lingkungan memberikan materi edukasi gerakan 3M Plus kepada para siswa untuk mengantisipasi perkembangbiakan nyamuk Aedes aegypti...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="#" class="text-emerald-700 text-xs font-bold hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Kartu Berita 3 -->
+                <article class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <img src="assets/foto-kegiatan/lansia.jpg" alt="Foto Senam Lansia" class="w-full h-44 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x250?text=Foto+Lansia'">
+                        <div class="p-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-0.5 rounded">Posyandu Lansia</span>
+                            <h4 class="font-bold text-sm text-gray-800 mt-2 leading-snug hover:text-emerald-700">Pelaksanaan Senam & Skrining Kesehatan Lansia Rutin</h4>
+                            <p class="text-xs text-gray-400 mt-1">5 Agustus 2026</p>
+                            <p class="text-xs text-gray-600 mt-2 line-clamp-3">
+                                Kegiatan posyandu lansia diisi dengan latihan fisik senam sehat bersama dilanjutkan dengan pemeriksaan tekanan darah dan gula darah gratis...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="#" class="text-emerald-700 text-xs font-bold hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FOOTER / KONTAK -->
+    <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
+                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
+                <p class="text-xs text-emerald-200">WhatsApp Aduan: 0812-3456-7890</p>
+                <p class="text-xs text-emerald-200">Email: puskesmas.haurgading@gmail.com</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Navigasi</h5>
+                <div class="flex flex-col space-y-1 text-xs text-emerald-200">
+                    <a href="index.html" class="hover:underline">Beranda</a>
+                    <a href="profil.html" class="hover:underline">Profil Instansi</a>
+                    <a href="pendaftaran.html" class="hover:underline">Panduan Mobile JKN</a>
+                    <a href="pengaduan.html" class="hover:underline">Formulir Aduan</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
+            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

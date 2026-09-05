@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - UPTD Puskesmas Haur Gading</title>
+    <!-- Framework Tampilan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR / HEADER -->
+<!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo Kabupaten HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo HSU.png'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas Haur Gading" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.src='Logo Puskesmas.png'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+
+        <!-- Menu Mobile Navigasi Ringkas -->
+        <div class="md:hidden bg-emerald-800 px-4 py-2 flex justify-between text-xs font-medium">
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Aduan</a>
+        </div>
+    </header>
+
+    <!-- 2. BANNER HALAMAN -->
+    <section class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold">Profil Instansi</h2>
+        <p class="text-xs md:text-sm text-emerald-100 mt-1">Mengenal lebih dekat UPTD Puskesmas Haur Gading</p>
+    </section>
+
+    <!-- 3. KONTEN UTAMA PROFIL -->
+    <main class="container mx-auto px-4 my-8 max-w-4xl flex-grow space-y-8">
+
+        <!-- Tentang Kami -->
+        <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <h3 class="text-xl font-bold text-emerald-800 mb-3 border-b-2 border-emerald-500 pb-2">Tentang Kami</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                UPTD Puskesmas Haur Gading merupakan fasilitas pelayanan kesehatan tingkat pertama yang bertanggung jawab atas penyelenggaraan pembangunan kesehatan di wilayah Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara. Kami berkomitmen memberikan pelayanan kesehatan primer yang berkualitas, merata, serta terjangkau bagi seluruh lapisan masyarakat.
+            </p>
+        </section>
+
+        <!-- Visi & Misi -->
+        <section class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <h3 class="text-xl font-bold text-emerald-800 mb-3 border-b-2 border-emerald-500 pb-2">Visi</h3>
+                <p class="text-sm text-gray-700 font-semibold italic text-center py-4 bg-emerald-50 rounded-lg border border-emerald-100">
+                   “Pelayanan Kesehatan Yang Berkualitas menuju Masyarakat Haur Gading Yang Sehat”.  
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <h3 class="text-xl font-bold text-emerald-800 mb-3 border-b-2 border-emerald-500 pb-2">Misi</h3>
+                <ol class="list-decimal list-inside text-sm text-gray-600 space-y-2">
+                    <li>Meningkatkan Manajemen Pelayanan Kesehatan</li>
+                    <li>Meningkatkan Mutu Pelayanan Dan Profesionalisme Tenaga Kesehatan</li>
+                    <li>Mendorong Terciptanya Masyarakat Dalam Berprilaku Hidup Bersih Dan Sehat</li>
+                    <li>Meningkatkan Kemandirian Masyarakat Dalam Memeliharakesehatan.</li>
+		    <li>Meningkatkan Kerjasama Lintas Program Dan Lintas Sektor.</li>
+                </ol>
+            </div>
+        </section>
+
+<!-- MAKLUMAT PELAYANAN (DALAM BENTUK FOTO) -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 text-center">
+            <h3 class="text-lg md:text-xl font-bold text-emerald-800 pb-2 border-b-2 border-emerald-600 mb-2 inline-block">
+                Maklumat Pelayanan
+            </h3>
+            <p class="text-xs text-gray-500 mb-6">Komitmen Standar Pelayanan Publik UPTD Puskesmas Haur Gading</p>
+
+            <div class="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <!-- Foto Maklumat Pelayanan -->
+                <img src="assets/maklumat-pelayanan.png" alt="Maklumat Pelayanan UPTD Puskesmas Haur Gading" class="w-full h-auto object-contain" onerror="this.src='Maklumat Pelayanan.png'">
+            </div>
+            <p class="text-[11px] text-gray-400 mt-2 italic">Klik atau perbesar foto untuk melihat rincian maklumat pelayanan</p>
+        </section>
+
+        <!-- Struktur Organisasi -->
+        <section class="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center">
+            <h3 class="text-xl font-bold text-emerald-800 mb-4 border-b-2 border-emerald-500 pb-2 text-left">Struktur Organisasi</h3>
+            <div class="bg-gray-100 p-4 rounded-lg border border-gray-200">
+                <!-- Tempat Foto Bagan Struktur Organisasi -->
+                <img src="assets/struktur.png" alt="Struktur Organisasi Puskesmas Haur Gading" class="mx-auto rounded max-h-96 object-contain" onerror="this.src='https://via.placeholder.com/700x400?text=Bagan+Struktur+Organisasi'">
+                <p class="text-xs text-gray-500 mt-2">Bagan Struktur Organisasi UPTD Puskesmas Haur Gading</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. FOOTER / KONTAK -->
+    <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
+                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
+                <p class="text-xs text-emerald-200">WhatsApp Aduan: 0812-3456-7890</p>
+                <p class="text-xs text-emerald-200">Email: puskesmas.haurgading@gmail.com</p>
+            </div>
+            <div>
+                <h5 class="font-bold text-amber-400 mb-2">Navigasi</h5>
+                <div class="flex flex-col space-y-1 text-xs text-emerald-200">
+                    <a href="index.html" class="hover:underline">Beranda</a>
+                    <a href="pendaftaran.html" class="hover:underline">Panduan Mobile JKN</a>
+                    <a href="pengaduan.html" class="hover:underline">Formulir Aduan</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
+            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

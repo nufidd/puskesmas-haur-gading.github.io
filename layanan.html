@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Kesehatan - UPTD Puskesmas Haur Gading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- HEADER & NAVBAR -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo-hsu.png" alt="Logo HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.style.display='none'">
+                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.style.display='none'">
+                <div>
+                    <h1 class="font-bold text-base md:text-lg leading-tight uppercase tracking-wide">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
+                <a href="layanan.html" class="text-amber-300 font-bold underline">Layanan</a>
+                <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
+                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
+                <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER HALAMAN -->
+    <div class="bg-emerald-800 text-white py-10 px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold">Layanan Kesehatan Kami</h2>
+        <p class="text-emerald-100 text-xs md:text-sm mt-2">Informasi jenis pelayanan, standar pelayanan, serta jadwal operasional di UPTD Puskesmas Haur Gading</p>
+    </div>
+
+    <!-- KONTEN UTAMA -->
+    <main class="container mx-auto px-4 py-8 max-w-5xl space-y-8 flex-grow">
+
+        <!-- SECTION 1: JENIS & STANDAR PELAYANAN -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <h3 class="text-lg font-bold text-emerald-800 border-b pb-2 mb-4 flex items-center gap-2">
+                <i class="fas fa-stethoscope text-amber-500"></i> Jenis & Standar Pelayanan
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Pemeriksaan Umum (Poli Umum)</h4>
+                    <p class="text-xs text-gray-600">Pelayanan kesehatan dasar, pengobatan, konseling medis, dan rujukan pasien rawat jalan.</p>
+                </div>
+                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Kesehatan Ibu & Anak (KIA / KB)</h4>
+                    <p class="text-xs text-gray-600">Pemeriksaan kehamilan (ANC), pelayanan KB, imunisasi bayi, dan kesehatan reproduksi.</p>
+                </div>
+                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Pelayanan Gizi & Konseling</h4>
+                    <p class="text-xs text-gray-600">Konsultasi gizi, pemantauan status gizi anak balita, dan penanganan pencegahan stunting.</p>
+                </div>
+                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Posyandu Balita & Lansia</h4>
+                    <p class="text-xs text-gray-600">Kegiatan pelayanan kesehatan rutin berbasis masyarakat di seluruh desa wilayah kerja.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: JADWAL PELAYANAN -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <h3 class="text-lg font-bold text-emerald-800 border-b pb-2 mb-4 flex items-center gap-2">
+                <i class="fas fa-calendar-alt text-amber-500"></i> Jadwal Operasional Pelayanan
+            </h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left text-gray-600 border-collapse">
+                    <thead>
+                        <tr class="bg-emerald-700 text-white">
+                            <th class="p-3 rounded-tl-lg">Hari</th>
+                            <th class="p-3">Jam Pendaftaran</th>
+                            <th class="p-3 rounded-tr-lg">Layanan Utama</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-gray-800">Senin - Kamis</td>
+                            <td class="p-3">08.00 - 12.00 WITA</td>
+                            <td class="p-3">Poli Umum, KIA/KB, Gizi, Sanitasi, Farmasi</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-gray-800">Jumat</td>
+                            <td class="p-3">08.00 - 10.30 WITA</td>
+                            <td class="p-3">Poli Umum, Konseling Kesehatan, Farmasi</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-gray-800">Sabtu</td>
+                            <td class="p-3">08.00 - 11.30 WITA</td>
+                            <td class="p-3">Poli Umum, Imunisasi Rutin, Farmasi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 3: RINGKASAN ALUR PELAYANAN -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
+            <h3 class="text-lg font-bold text-emerald-800 mb-2">Butuh Informasi Alur Pendaftaran?</h3>
+            <p class="text-xs text-gray-600 mb-4">Panduan alur pendaftaran antrean dan syarat dokumen dapat dilihat pada halaman khusus pendaftaran.</p>
+            <a href="pendaftaran.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow-sm transition">
+                Lihat Alur Pendaftaran &rarr;
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-emerald-900 text-emerald-100 text-xs py-6 text-center border-t border-emerald-800">
+        <p>&copy; 2026 UPTD Puskesmas Haur Gading. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>

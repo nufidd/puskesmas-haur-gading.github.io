@@ -220,24 +220,27 @@
     <div class="container mx-auto px-4 max-w-6xl">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             
-            <!-- Kolom 1 & 2: Peta Google Maps Interaktif -->
+            <!-- Kolom 1 & 2: Peta Google Maps Akurat -->
             <div class="lg:col-span-2 bg-emerald-50/50 p-5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="flex items-center justify-between mb-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                     <div>
                         <h3 class="text-lg font-bold text-emerald-900 flex items-center gap-2">
                             <i class="fas fa-map-marked-alt text-amber-500"></i> Lokasi Puskesmas
                         </h3>
-                        <p class="text-xs text-gray-600 mt-0.5">Jl. Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan</p>
+                        <p class="text-xs text-gray-600 mt-0.5">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>
+                            Jl. KH. M. Janawi RT. IV, Desa Palimbang Sari, Kec. Haur Gading, Kab. Hulu Sungai Utara
+                        </p>
                     </div>
-                    <a href="https://maps.google.com" target="_blank" class="hidden sm:inline-flex items-center gap-1 bg-emerald-700 text-white text-xs px-3 py-1.5 rounded-lg hover:bg-emerald-800 transition">
-                        <i class="fas fa-directions"></i> Petunjuk Arah
+                    <a href="https://maps.app.goo.gl/ctRMpsthesoEcJTN7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs px-3.5 py-2 rounded-xl transition shadow-sm shrink-0">
+                        <i class="fas fa-directions"></i> Buka Peta
                     </a>
                 </div>
 
-                <!-- Frame Google Maps -->
+                <!-- Frame Google Maps Presisi -->
                 <div class="w-full h-72 rounded-xl overflow-hidden shadow-inner border border-gray-200">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15941.13996535541!2d115.22!3d-2.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMjUnNDguMCJTIDExNcKwMTMnMTIuMCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.3813636737525!2d115.22858087588145!3d-2.408018697570881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df02e1c5132512f%3A0xc4eb0498b0ddf5ff!2sPuskesmas%20Haur%20Gading!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
                         class="w-full h-full border-0" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -246,20 +249,20 @@
                 </div>
             </div>
 
-            <!-- Kolom 3: Informasi Kontak & Akses Cepat -->
+            <!-- Kolom 3: Jam Operasional & Layanan Cepat -->
             <div class="space-y-4">
                 
-                <!-- Card Jam Operational -->
+                <!-- Card Jam Operasional -->
                 <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
                     <h4 class="font-bold text-sm text-emerald-900 mb-3 flex items-center gap-2">
-                        <i class="fas fa-clock text-amber-500"></i> Jam Operational
+                        <i class="fas fa-clock text-amber-500"></i> Jam Operasional
                     </h4>
                     <ul class="text-xs text-gray-600 space-y-2">
-                        <li class="flex justify-between border-b pb-1">
+                        <li class="flex justify-between border-b pb-1.5">
                             <span>Senin – Kamis:</span>
                             <span class="font-semibold text-emerald-800">08.00 – 12.00 WITA</span>
                         </li>
-                        <li class="flex justify-between border-b pb-1">
+                        <li class="flex justify-between border-b pb-1.5">
                             <span>Jumat:</span>
                             <span class="font-semibold text-emerald-800">08.00 – 10.30 WITA</span>
                         </li>
@@ -270,16 +273,16 @@
                     </ul>
                 </div>
 
-                <!-- Card Hubungi / Layanan Aduan -->
+                <!-- Card Akses Cepat & Aduan -->
                 <div class="bg-emerald-800 text-white p-5 rounded-2xl shadow-sm relative overflow-hidden">
-                    <h4 class="font-bold text-sm text-amber-300 mb-1">Butuh Bantuan / Laporan?</h4>
-                    <p class="text-xs text-emerald-100 mb-4">Sampaikan kritik, saran, atau pertanyaan secara langsung ke tim pelayanan kami.</p>
+                    <h4 class="font-bold text-sm text-amber-300 mb-1">Layanan Informasi & Aduan</h4>
+                    <p class="text-xs text-emerald-100 mb-4">Butuh panduan pendaftaran atau ingin menyampaikan saran?</p>
                     
                     <div class="flex flex-col gap-2">
-                        <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs py-2 px-3 rounded-lg text-center transition flex items-center justify-center gap-2">
+                        <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs py-2.5 px-3 rounded-lg text-center transition flex items-center justify-center gap-2">
                             <i class="fas fa-id-card"></i> Alur Pendaftaran Online
                         </a>
-                        <a href="pengaduan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs py-2 px-3 rounded-lg text-center border border-emerald-500 transition flex items-center justify-center gap-2">
+                        <a href="pengaduan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs py-2.5 px-3 rounded-lg text-center border border-emerald-500 transition flex items-center justify-center gap-2">
                             <i class="fab fa-whatsapp"></i> Layanan Pengaduan
                         </a>
                     </div>

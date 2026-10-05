@@ -30,56 +30,57 @@
         </div>
     </header>
 
-    <!-- 2. BANNER HEADER ARTIKEL -->
-    <section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white py-10 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <!-- Breadcrumb -->
-            <nav class="text-xs text-emerald-200 mb-4 flex items-center gap-2">
+<!-- 2. BANNER HEADER ARTIKEL (RINGKAS & COMPACT) -->
+<section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white py-4 md:py-5 px-4 shadow-sm">
+    <div class="container mx-auto max-w-4xl">
+        <!-- Breadcrumb & Detail Ringkas -->
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <nav class="text-[11px] text-emerald-200 flex items-center gap-1.5">
                 <a href="index.html" class="hover:underline">Beranda</a> &rsaquo;
                 <a href="berita.html" class="hover:underline">Berita</a> &rsaquo;
-                <span id="breadcrumbJudul" class="text-white font-semibold truncate max-w-xs">Detail Artikel</span>
+                <span id="breadcrumbJudul" class="text-white font-medium truncate max-w-[200px] sm:max-w-xs">Detail Artikel</span>
             </nav>
 
-            <!-- Kategori & Tanggal -->
-            <div class="flex items-center gap-3 mb-3">
-                <span id="beritaKategori" class="bg-amber-400 text-emerald-950 text-[11px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow">
+            <div class="flex items-center gap-2">
+                <span id="beritaKategori" class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-sm">
                     Kategori
                 </span>
-                <span class="text-xs text-emerald-200 flex items-center gap-1">
+                <span class="text-[11px] text-emerald-200 flex items-center gap-1">
                     <i class="far fa-calendar-alt"></i> <span id="beritaTanggal">--</span>
                 </span>
             </div>
-
-            <!-- Judul Berita -->
-            <h1 id="beritaJudul" class="text-2xl md:text-3xl font-extrabold leading-tight">
-                Judul Artikel Berita
-            </h1>
         </div>
-    </section>
 
-    <!-- 3. KONTEN ARTIKEL UTAMA -->
-    <main class="container mx-auto max-w-4xl px-4 py-8 flex-grow">
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 space-y-6">
-            
-            <!-- Gambar Utama / Poster -->
-            <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 flex justify-center">
-                <img id="beritaGambar" src="" alt="Gambar Berita" class="w-full max-h-[500px] object-contain">
-            </div>
+        <!-- Judul Berita -->
+        <h1 id="beritaJudul" class="text-lg md:text-xl font-bold leading-snug tracking-tight">
+            Judul Artikel Berita
+        </h1>
+    </div>
+</section>
 
-            <!-- Isi Paragraf Artikel -->
-            <div id="beritaIsi" class="text-sm md:text-base text-gray-700 leading-relaxed space-y-4 whitespace-pre-line border-t pt-6">
-                <!-- Teks Berita Diresapi Otomatis -->
-            </div>
-
-            <!-- Tombol Navigasi Bawah -->
-            <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <a href="berita.html" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition">
-                    <i class="fas fa-arrow-left"></i> Lihat Berita Lainnya
-                </a>
-            </div>
-
+<!-- 3. KONTEN ARTIKEL UTAMA (NAIK KE ATAS) -->
+<main class="container mx-auto max-w-4xl px-4 py-4 md:py-6 flex-grow">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 space-y-5">
+        
+        <!-- Gambar Utama / Poster -->
+        <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 flex justify-center">
+            <img id="beritaGambar" src="" alt="Gambar Berita" class="w-full max-h-[450px] object-contain">
         </div>
-    </main>
+
+        <!-- Isi Paragraf Artikel -->
+        <div id="beritaIsi" class="text-xs md:text-sm text-gray-700 leading-relaxed space-y-3 whitespace-pre-line border-t pt-4">
+            <!-- Teks Berita Diresapi Otomatis -->
+        </div>
+
+        <!-- Tombol Navigasi Bawah -->
+        <div class="border-t pt-4 flex justify-between items-center">
+            <a href="berita.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition">
+                <i class="fas fa-arrow-left"></i> Lihat Berita Lainnya
+            </a>
+        </div>
+
+    </div>
+</main>
 
     <!-- SCRIPT OTOMATIS AMBIL DATA DARI URL -->
     <script>

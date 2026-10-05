@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Detail Berita - UPTD Puskesmas Haur Gading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- NAVBAR (Samakan dengan Navbar utama) -->
+    <header class="bg-emerald-800 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="Logo" class="h-10">
+                <div>
+                    <h1 class="font-bold text-sm leading-tight">PUSKESMAS HAUR GADING</h1>
+                    <p class="text-[10px] text-emerald-200">Kabupaten Hulu Sungai Utara</p>
+                </div>
+            </a>
+            <a href="berita.html" class="text-xs bg-emerald-700 hover:bg-emerald-600 px-3 py-1.5 rounded-lg border border-emerald-500 transition">
+                &larr; Kembali ke Berita
+            </a>
+        </div>
+    </header>
+
+    <!-- BANNER HEADER ARTIKEL -->
+    <section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white py-10 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <!-- Breadcrumb -->
+            <nav class="text-xs text-emerald-200 mb-4 flex items-center gap-2">
+                <a href="index.html" class="hover:underline">Beranda</a> &rsaquo;
+                <a href="berita.html" class="hover:underline">Berita</a> &rsaquo;
+                <span id="breadcrumbJudul" class="text-white font-semibold truncate max-w-xs">Detail Artikell</span>
+            </nav>
+
+            <!-- Kategori & Tanggal -->
+            <div class="flex items-center gap-3 mb-3">
+                <span id="beritaKategori" class="bg-amber-400 text-emerald-950 text-[11px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow">
+                    Kategori
+                </span>
+                <span class="text-xs text-emerald-200 flex items-center gap-1">
+                    <i class="far fa-calendar-alt"></i> <span id="beritaTanggal">--</span>
+                </span>
+            </div>
+
+            <!-- Judul Berita -->
+            <h1 id="beritaJudul" class="text-2xl md:text-3xl font-extrabold leading-tight">
+                Judul Artikel Berita
+            </h1>
+        </div>
+    </section>
+
+    <!-- KONTEN ARTIKEL UTAMA -->
+    <main class="container mx-auto max-w-4xl px-4 py-8 flex-grow">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 space-y-6">
+            
+            <!-- Gambar Utama / Poster -->
+            <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 flex justify-center">
+                <img id="beritaGambar" src="" alt="Gambar Berita" class="w-full max-h-[500px] object-contain">
+            </div>
+
+            <!-- Isi Paragraf Artikel -->
+            <div id="beritaIsi" class="text-sm md:text-base text-gray-700 leading-relaxed space-y-4 whitespace-pre-line border-t pt-6">
+                <!-- Teks Berita Diresapi Otomatis -->
+            </div>
+
+            <!-- Tombol Bagikan & Navigasi -->
+            <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <a href="berita.html" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition">
+                    <i class="fas fa-arrow-left"></i> Lihat Berita Lainnya
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SCRIPT OTOMATIS AMBIL DATA DARI URL -->
+    <script>
+        // Database Berita Sederhana
+        const dataBerita = {
+            "skm": {
+                kategori: "Hasil SKM",
+                tanggal: "20 Agustus 2026",
+                gambar: "assets/skm.png",
+                judul: "Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading",
+                isi: `Berdasarkan Peraturan Menteri PANRB Nomor 14 Tahun 2017, UPTD Puskesmas Haur Gading telah menyelesaikan rekapitulasi penilaian SKM Periode Semester I Tahun 2026.\n\nDari hasil pengolahan data kuesioner masyarakat dan pasien, diperoleh nilai Indeks Kepuasan Masyarakat (IKM) sebesar 82,13 dengan Mutu Pelayanan B (SANGAT BAIK).\n\nTerima kasih atas kepercayaan dan masukan dari seluruh masyarakat Kecamatan Haur Gading. Nilai ini menjadi motivasi bagi seluruh staf UPTD Puskesmas Haur Gading untuk terus meningkatkan mutu dan kenyamanan pelayanan kesehatan bagi masyarakat.`
+            },
+            "dbd": {
+                kategori: "Edukasi",
+                tanggal: "12 Agustus 2026",
+                gambar: "assets/penyuluhan.jpg",
+                judul: "Sosialisasi Pencegahan Demam Berdarah (DBD) di Sekolah Dasar",
+                isi: `Tim Kesehatan Lingkungan UPTD Puskesmas Haur Gading memberikan materi edukasi gerakan 3M Plus kepada para siswa untuk mengantisipasi perkembangbiakan nyamuk Aedes aegypti.\n\nDalam kegiatan ini, para siswa diajak untuk mengenali tempat-tempat perindukan nyamuk serta mempraktikkan cara menjaga kebersihan lingkungan sekolah dan rumah masing-masing.\n\nEdukasijak dini ini diharapkan dapat menumbuhkan kebiasaan hidup bersih dan sehat pada anak-anak sekolah dasar.`
+            },
+            "lansia": {
+                kategori: "Posyandu Lansia",
+                tanggal: "5 Agustus 2026",
+                gambar: "assets/lansia.jpg",
+                judul: "Pelaksanaan Senam & Skrining Kesehatan Lansia Rutin",
+                isi: `Kegiatan posyandu lansia diisi dengan latihan fisik senam sehat bersama dilanjutkan dengan pemeriksaan tekanan darah dan gula darah gratis.\n\nKegiatan ini bertujuan untuk memantau kesehatan para lansia di wilayah kerja UPTD Puskesmas Haur Gading secara berkala agar tetap produktif dan sehat di usia lanjut.`
+            }
+        };
+
+        // Mengambil parameter 'id' dari URL (contoh: detail-berita.html?id=skm)
+        const urlParams = new URLSearchParams(window.location.search);
+        const idBerita = urlParams.get('id');
+
+        if (idBerita && dataBerita[idBerita]) {
+            const item = dataBerita[idBerita];
+            document.getElementById('pageTitle').innerText = item.judul + " - UPTD Puskesmas Haur Gading";
+            document.getElementById('breadcrumbJudul').innerText = item.judul;
+            document.getElementById('beritaKategori').innerText = item.kategori;
+            document.getElementById('beritaTanggal').innerText = item.tanggal;
+            document.getElementById('beritaJudul').innerText = item.judul;
+            document.getElementById('beritaGambar').src = item.gambar;
+            document.getElementById('beritaIsi').innerText = item.isi;
+        } else {
+            document.getElementById('beritaJudul').innerText = "Berita Tidak Ditemukan";
+            document.getElementById('beritaIsi').innerText = "Maaf, berita yang Anda cari tidak ditemukan atau telah dihapus.";
+        }
+    </script>
+</body>
+</html>

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita & Informasi - UPTD Puskesmas Haur Gading</title>
-    <!-- Framework Tampilan Tailwind CSS -->
+    <!-- Framework Tampilan Tailwind CSS & Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <!-- 1. NAVBAR / HEADER -->
-<!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
+    <!-- 1. NAVBAR / HEADER (VERSI 2 LOGO) -->
     <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Logo Kabupaten HSU & Logo Puskesmas Haur Gading -->
@@ -29,7 +29,7 @@
                 <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
                 <a href="layanan.html" class="hover:text-amber-200 transition">Layanan</a>
                 <a href="pendaftaran.html" class="hover:text-amber-200 transition">Alur Pendaftaran</a>
-                <a href="berita.html" class="hover:text-amber-200 transition">Berita</a>
+                <a href="berita.html" class="text-amber-300 font-bold transition">Berita</a>
                 <a href="galeri.html" class="hover:text-amber-200 transition">Galeri</a>
                 <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
             </nav>
@@ -40,108 +40,247 @@
             <a href="index.html">Beranda</a>
             <a href="profil.html">Profil</a>
             <a href="pendaftaran.html">Pendaftaran</a>
-            <a href="berita.html">Berita</a>
+            <a href="berita.html" class="text-amber-300 font-bold">Berita</a>
             <a href="pengaduan.html">Aduan</a>
         </div>
     </header>
 
     <!-- 2. BANNER HALAMAN -->
-    <section class="bg-emerald-800 text-white py-8 px-4 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold">Berita & Informasi Publik</h2>
-        <p class="text-xs md:text-sm text-emerald-100 mt-1">Kumpulan berita kegiatan, edukasi kesehatan, dan pengumuman resmi</p>
-    </section>
-
-<!-- 3. KONTEN UTAMA BERITA -->
-<main class="container mx-auto px-4 my-8 max-w-5xl flex-grow space-y-8">
-
-    <!-- Bagian Pengumuman Penting -->
-    <section>
-        <h3 class="text-xl font-bold text-emerald-800 mb-4 flex items-center">
-            <span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded mr-2">PENTING</span> Pengumuman Terbaru
-        </h3>
-        <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-sm space-y-2">
-            <span class="text-xs text-amber-800 font-semibold">Dipublikasikan: 1 September 2026</span>
-            <h4 class="font-bold text-base text-gray-800">Jadwal Pelayanan PIN Polio & Posyandu Balita Wilayah Kerja Puskesmas</h4>
-            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
-                Diberitahukan kepada seluruh warga Kecamatan Haur Gading, pelaksanaan imunisasi serentak dan penimbangan balita rutin akan dilaksanakan di seluruh Posyandu desa mulai tanggal 10 September 2026. Harap membawa Buku KIA anak saat berkunjung.
-            </p>
+    <section class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-emerald-900 text-white py-8 px-4 text-center shadow-sm">
+        <div class="container mx-auto max-w-4xl">
+            <span class="inline-flex items-center gap-1.5 bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[10px] font-extrabold uppercase tracking-widest px-3 py-0.5 rounded-full mb-2">
+                <i class="fas fa-newspaper"></i> Informasi Publik
+            </span>
+            <h2 class="text-2xl md:text-3xl font-bold">Berita & Informasi Publik</h2>
+            <p class="text-xs md:text-sm text-emerald-100 mt-1">Kumpulan berita kegiatan, edukasi kesehatan, dan pengumuman resmi UPTD Puskesmas Haur Gading</p>
         </div>
     </section>
 
-    <!-- Daftar Kartu Berita -->
-    <section>
-        <h3 class="text-xl font-bold text-emerald-800 mb-6">Berita Kegiatan Terbaru</h3>
+    <!-- 3. KONTEN UTAMA BERITA -->
+    <main class="container mx-auto px-4 my-8 max-w-5xl flex-grow space-y-8">
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <!-- Bagian Pengumuman Penting -->
+        <section>
+            <h3 class="text-xl font-bold text-emerald-800 mb-4 flex items-center">
+                <span class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded mr-2">PENTING</span> Pengumuman Terbaru
+            </h3>
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-sm space-y-2">
+                <span class="text-xs text-amber-800 font-semibold">Dipublikasikan: 1 September 2026</span>
+                <h4 class="font-bold text-base text-gray-800">Jadwal Pelayanan PIN Polio & Posyandu Balita Wilayah Kerja Puskesmas</h4>
+                <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    Diberitahukan kepada seluruh warga Kecamatan Haur Gading, pelaksanaan imunisasi serentak dan penimbangan balita rutin akan dilaksanakan di seluruh Posyandu desa mulai tanggal 10 September 2026. Harap membawa Buku KIA anak saat berkunjung.
+                </p>
+            </div>
+        </section>
 
-            <!-- Kartu Berita 1 -->
-            <a href="detail-berita.html?id=skm" 
-               class="berita-item bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
-                <div>
-                    <img src="assets/skm.png" alt="Hasil SKM" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <span class="berita-kategori bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded">Hasil SKM</span>
-                        <h4 class="berita-judul font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading</h4>
-                        <p class="text-xs text-gray-400 mt-1">20 Agustus 2026</p>
-                        <p class="berita-deskripsi text-xs text-gray-600 mt-2 line-clamp-3">
-                            Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading Semester I Tahun 2026 Berdasarkan Peraturan Government...
+    <!-- GALERI VIDEO & INFOGRAFIS EDUKASI (FORMAT MEDIA SOSIAL) -->
+<section class="py-10 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+        
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-200">
+                    Edukasi Digital
+                </span>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mt-2 flex items-center gap-2">
+                    <i class="fas fa-photo-video text-emerald-700"></i> Galeri Edukasi Kesehatan
+                </h3>
+                <p class="text-xs text-gray-500 mt-1">
+                    Informasi ringkas, tips sehat, dan video sosialisasi khas UPTD Puskesmas Haur Gading.
+                </p>
+            </div>
+
+            <!-- Filter Tab -->
+            <div class="flex items-center gap-2 bg-gray-100 p-1 rounded-xl text-xs font-semibold shrink-0">
+                <button onclick="filterGaleri('semua')" class="btn-filter bg-emerald-700 text-white px-3 py-1.5 rounded-lg transition" id="tab-semua">Semua</button>
+                <button onclick="filterGaleri('video')" class="btn-filter text-gray-600 hover:text-emerald-800 px-3 py-1.5 rounded-lg transition" id="tab-video">Video Reels</button>
+                <button onclick="filterGaleri('infografis')" class="btn-filter text-gray-600 hover:text-emerald-800 px-3 py-1.5 rounded-lg transition" id="tab-infografis">Infografis</button>
+            </div>
+        </div>
+
+        <!-- Grid Konten Media Sosial -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <!-- Item 1: Video Reels (Demam Berdarah) -->
+            <div class="item-galeri item-video bg-gray-900 rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
+                <!-- Thumbnail / Video Preview -->
+                <img src="assets/penyuluhan.jpg" alt="Video DBD" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                
+                <!-- Overlay Gradient & Play Button -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center">
+                        <span class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fas fa-video"></i> Video
+                        </span>
+                        <span class="text-white/80 text-[10px] bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-full">0:59</span>
+                    </div>
+
+                    <!-- Tombol Play Tengah -->
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/40 hover:bg-emerald-600 rounded-full flex items-center justify-center text-white text-lg mx-auto transition transform group-hover:scale-110">
+                        <i class="fas fa-play ml-1"></i>
+                    </a>
+
+                    <!-- Judul & Deskripsi Singkat -->
+                    <div>
+                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">
+                            Gerakan 3M Plus: Cegah Nyamuk DBD di Lingkungan Rumah
+                        </h4>
+                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
+                            <i class="fab fa-instagram text-pink-400"></i> @puskesmas_haurgading
                         </p>
                     </div>
                 </div>
-                <div class="p-4 pt-0">
-                    <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
-                </div>
-            </a>
+            </div>
 
-            <!-- Kartu Berita 2 -->
-            <a href="detail-berita.html?id=dbd" 
-               class="berita-item bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
-                <div>
-                    <img src="assets/penyuluhan.jpg" alt="Penyuluhan DBD" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <span class="berita-kategori bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded">Edukasi</span>
-                        <h4 class="berita-judul font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Sosialisasi Pencegahan Demam Berdarah (DBD) di Sekolah Dasar</h4>
-                        <p class="text-xs text-gray-400 mt-1">12 Agustus 2026</p>
-                        <p class="berita-deskripsi text-xs text-gray-600 mt-2 line-clamp-3">
-                            Tim Kesehatan Lingkungan memberikan materi edukasi gerakan 3M Plus kepada para siswa untuk mengantisipasi perkembangbiakan nyamuk Aedes aegypti...
+            <!-- Item 2: Infografis Poster (Pencegahan Stunting) -->
+            <div class="item-galeri item-infografis bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
+                <img src="assets/skm.png" alt="Infografis Stunting" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center">
+                        <span class="bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fas fa-image"></i> Infografis
+                        </span>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">
+                            Pentingnya Protein Hewani untuk Cegah Stunting Balita
+                        </h4>
+                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
+                            <i class="fas fa-heart text-red-500"></i> Edukasi Gizi KIA
                         </p>
                     </div>
                 </div>
-                <div class="p-4 pt-0">
-                    <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
-                </div>
-            </a>
+            </div>
 
-            <!-- Kartu Berita 3 -->
-            <a href="detail-berita.html?id=lansia" 
-               class="berita-item bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
-                <div>
-                    <img src="assets/lansia.jpg" alt="Senam Lansia" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
-                    <div class="p-4">
-                        <span class="berita-kategori bg-purple-100 text-purple-800 text-xs font-bold px-2 py-0.5 rounded">Posyandu Lansia</span>
-                        <h4 class="berita-judul font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Pelaksanaan Senam & Skrining Kesehatan Lansia Rutin</h4>
-                        <p class="text-xs text-gray-400 mt-1">5 Agustus 2026</p>
-                        <p class="berita-deskripsi text-xs text-gray-600 mt-2 line-clamp-3">
-                            Kegiatan posyandu lansia diisi dengan latihan fisik senam sehat bersama dilanjutkan dengan pemeriksaan tekanan darah dan gula darah gratis...
+            <!-- Item 3: Video Reels (Hipertensi & Cek Rutin) -->
+            <div class="item-galeri item-video bg-gray-900 rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
+                <img src="assets/lansia.jpg" alt="Video Hipertensi" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center">
+                        <span class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fas fa-video"></i> Video
+                        </span>
+                        <span class="text-white/80 text-[10px] bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-full">1:15</span>
+                    </div>
+
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/40 hover:bg-emerald-600 rounded-full flex items-center justify-center text-white text-lg mx-auto transition transform group-hover:scale-110">
+                        <i class="fas fa-play ml-1"></i>
+                    </a>
+
+                    <div>
+                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">
+                            Tips Mengontrol Tekanan Darah untuk Lansia Sehat
+                        </h4>
+                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
+                            <i class="fab fa-youtube text-red-500"></i> Puskesmas Haur Gading
                         </p>
                     </div>
                 </div>
-                <div class="p-4 pt-0">
-                    <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
+            </div>
+
+            <!-- Item 4: Infografis Poster (Alur Berdaftaran) -->
+            <div class="item-galeri item-infografis bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
+                <img src="assets/skm.png" alt="Infografis Alur" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center">
+                        <span class="bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fas fa-image"></i> Infografis
+                        </span>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">
+                            Panduan Berobat Pasien BPJS & Umum Tanpa Antre
+                        </h4>
+                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
+                            <i class="fas fa-info-circle text-amber-400"></i> Layanan Publik
+                        </p>
+                    </div>
                 </div>
-            </a>
+            </div>
 
         </div>
-    </section>
+    </div>
+</section>
+        <!-- Daftar Kartu Berita -->
+        <section>
+            <h3 class="text-xl font-bold text-emerald-800 mb-6">Berita Kegiatan Terbaru</h3>
 
-</main>
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Kartu Berita 1 -->
+                <a href="detail-berita.html?id=skm" 
+                   class="berita-item bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div>
+                        <img src="assets/skm.png" alt="Hasil SKM" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <span class="berita-kategori bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded">Hasil SKM</span>
+                            <h4 class="berita-judul font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading</h4>
+                            <p class="text-xs text-gray-400 mt-1">20 Agustus 2026</p>
+                            <p class="berita-deskripsi text-xs text-gray-600 mt-2 line-clamp-3">
+                                Hasil Survei Kepuasan Masyarakat di Puskesmas Haur Gading Semester I Tahun 2026 Berdasarkan Peraturan Pemerintah...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Kartu Berita 2 -->
+                <a href="detail-berita.html?id=dbd" 
+                   class="berita-item bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div>
+                        <img src="assets/penyuluhan.jpg" alt="Penyuluhan DBD" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <span class="berita-kategori bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded">Edukasi</span>
+                            <h4 class="berita-judul font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Sosialisasi Pencegahan Demam Berdarah (DBD) di Sekolah Dasar</h4>
+                            <p class="text-xs text-gray-400 mt-1">12 Agustus 2026</p>
+                            <p class="berita-deskripsi text-xs text-gray-600 mt-2 line-clamp-3">
+                                Tim Kesehatan Lingkungan memberikan materi edukasi gerakan 3M Plus kepada para siswa untuk mengantisipasi perkembangbiakan nyamuk Aedes aegypti...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Kartu Berita 3 -->
+                <a href="detail-berita.html?id=lansia" 
+                   class="berita-item bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div>
+                        <img src="assets/lansia.jpg" alt="Senam Lansia" class="w-full h-44 object-cover bg-gray-200 group-hover:scale-105 transition duration-300">
+                        <div class="p-4">
+                            <span class="berita-kategori bg-purple-100 text-purple-800 text-xs font-bold px-2 py-0.5 rounded">Posyandu Lansia</span>
+                            <h4 class="berita-judul font-bold text-sm text-gray-800 mt-2 leading-snug group-hover:text-emerald-700">Pelaksanaan Senam & Skrining Kesehatan Lansia Rutin</h4>
+                            <p class="text-xs text-gray-400 mt-1">5 Agustus 2026</p>
+                            <p class="berita-deskripsi text-xs text-gray-600 mt-2 line-clamp-3">
+                                Kegiatan posyandu lansia diisi dengan latihan fisik senam sehat bersama dilanjutkan dengan pemeriksaan tekanan darah dan gula darah gratis...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <span class="text-emerald-700 text-xs font-bold group-hover:underline inline-block mt-2">Baca Selengkapnya &rarr;</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
 
     <!-- 4. FOOTER / KONTAK -->
     <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
                 <h5 class="font-bold text-amber-400 mb-2">UPTD Puskesmas Haur Gading</h5>
-                <p class="text-xs text-emerald-200">Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
+                <p class="text-xs text-emerald-200">Jl. KH. M. Janawi RT. IV, Desa Palimbang Sari, Kecamatan Haur Gading, Kabupaten Hulu Sungai Utara, Kalimantan Selatan.</p>
             </div>
             <div>
                 <h5 class="font-bold text-amber-400 mb-2">Kontak Cepat</h5>
@@ -162,58 +301,36 @@
             &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
         </div>
     </footer>
-<!-- KODE POP-UP MODAL (BERITA) -->
-    <div id="modalBerita" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all">
-            
-            <!-- Header Modal & Tombol Tutup -->
-            <div class="p-4 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white z-10">
-                <span id="modalKategori" class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Kategori</span>
-                <button onclick="tutupModal()" class="text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 w-8 h-8 rounded-full flex items-center justify-center font-bold transition">&times;</button>
-            </div>
 
-            <!-- Gambar Berita Modal -->
-            <img id="modalGambar" src="" alt="Foto Berita" class="w-full max-h-[500px] object-contain bg-gray-100 rounded-t-lg">
+<!-- SCRIPT FILTER TAB GALERI -->
+<script>
+    function filterGaleri(kategori) {
+        const items = document.querySelectorAll('.item-galeri');
+        const buttons = document.querySelectorAll('.btn-filter');
 
-            <!-- Isi Konten Modal -->
-            <div class="p-6">
-                <p id="modalTanggal" class="text-xs text-gray-400 mb-2"></p>
-                <h3 id="modalJudul" class="text-xl font-bold text-gray-800 mb-4 leading-snug"></h3>
-                <p id="modalIsi" class="text-sm text-gray-600 leading-relaxed whitespace-pre-line"></p>
-            </div>
+        // Reset style tombol filter
+        buttons.forEach(btn => {
+            btn.classList.remove('bg-emerald-700', 'text-white');
+            btn.classList.add('text-gray-600');
+        });
 
-            <!-- Footer Modal -->
-            <div class="p-4 bg-gray-50 border-t border-gray-100 flex justify-end">
-                <button onclick="tutupModal()" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-5 py-2.5 rounded-lg transition">Tutup</button>
-            </div>
-        </div>
-    </div>
+        // Set tombol aktif
+        document.getElementById('tab-' + kategori).classList.add('bg-emerald-700', 'text-white');
+        document.getElementById('tab-' + kategori).classList.remove('text-gray-600');
 
-    <!-- SCRIPT JAVASCRIPT POP-UP -->
-    <script>
-        function bukaModal(kategori, tanggal, gambar, judul, isi) {
-            document.getElementById('modalKategori').innerText = kategori;
-            document.getElementById('modalTanggal').innerText = tanggal;
-            document.getElementById('modalGambar').src = gambar;
-            document.getElementById('modalJudul').innerText = judul;
-            document.getElementById('modalIsi').innerText = isi;
-            
-            document.getElementById('modalBerita').classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Matikan scroll background
-        }
-
-        function tutupModal() {
-            document.getElementById('modalBerita').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Aktifkan kembali scroll
-        }
-
-        // Tutup modal jika mengklik area luar gambar/teks
-        window.onclick = function(event) {
-            const modal = document.getElementById('modalBerita');
-            if (event.target === modal) {
-                tutupModal();
+        // Tampilkan/sembunyikan item
+        items.forEach(item => {
+            if (kategori === 'semua') {
+                item.classList.remove('hidden');
+            } else if (kategori === 'video' && item.classList.contains('item-video')) {
+                item.classList.remove('hidden');
+            } else if (kategori === 'infografis' && item.classList.contains('item-infografis')) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
             }
-        }
-    </script>
+        });
+    }
+</script>
 </body>
 </html>

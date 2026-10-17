@@ -200,7 +200,7 @@
     </div>
 </section>
 
-<!-- SKRINING RISIKO STUNTING MANDIRI -->
+<!-- SKRINING RISIKO STUNTING MANDIRI (DENGAN INPUT BB/TB) -->
 <section id="skrining-stunting" class="py-10 bg-amber-50/50 border-b border-amber-100 my-8">
     <div class="container mx-auto px-4 max-w-4xl">
         
@@ -211,21 +211,44 @@
             </span>
             <h3 class="text-xl md:text-2xl font-bold text-emerald-900 mt-2">Skrining Mandiri Risiko Stunting Balita</h3>
             <p class="text-xs text-gray-600 mt-1 max-w-lg mx-auto">
-                Jawab pertanyaan berikut untuk deteksi dini tumbuh kembang buah hati Anda (Usia 0 - 5 Tahun).
+                Masukkan data fisik dan jawab kuesioner berikut untuk deteksi dini tumbuh kembang buah hati Anda (Usia 0 - 5 Tahun).
             </p>
         </div>
 
         <!-- Form Kuesioner -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-200 space-y-4 text-xs">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-200 space-y-5 text-xs">
             
+            <!-- FORM INPUT DATA FISIK BALITA -->
+            <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200/60 space-y-3">
+                <h4 class="font-bold text-emerald-900 flex items-center gap-2 text-xs">
+                    <i class="fas fa-child text-amber-600"></i> Data Fisik Balita
+                </h4>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">Usia Anak (Bulan)</label>
+                        <input type="number" id="stuntingUsia" placeholder="Contoh: 18" min="0" max="60" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">Berat Badan (kg)</label>
+                        <input type="number" step="0.1" id="stuntingBB" placeholder="Contoh: 10.5" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-1">Tinggi/Panjang Badan (cm)</label>
+                        <input type="number" step="0.1" id="stuntingTB" placeholder="Contoh: 80" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white">
+                    </div>
+                </div>
+            </div>
+
+            <!-- INDIKATOR PERTANYAAN -->
             <div class="space-y-3">
-                <p class="font-bold text-emerald-900 border-b pb-2">Pertanyaan Indikator Dini:</p>
+                <p class="font-bold text-emerald-900 border-b pb-2">Pertanyaan Indikator Tambahan:</p>
 
                 <!-- Pertanyaan 1 -->
                 <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
                     <input type="checkbox" id="stuntingQ1" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
                     <label for="stuntingQ1" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>1. Tinggi/Panjang Badan:</strong> Apakah tinggi/panjang badan anak tampak lebih pendek dibandingkan anak-anak seusianya di grafik KMS/Buku KIA?
+                        <strong>1. Kenaikan Berat Badan:</strong> Apakah kenaikan berat badan anak sering tidak mencapai garis hijau (sering tersendat/turun) dalam 2-3 bulan berturut-turut di Buku KIA?
                     </label>
                 </div>
 
@@ -233,7 +256,7 @@
                 <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
                     <input type="checkbox" id="stuntingQ2" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
                     <label for="stuntingQ2" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>2. Kenaikan Berat Badan:</strong> Apakah kenaikan berat badan anak sering tidak mencapai garis hijau (sering tersendat/turun) dalam 2-3 bulan berturut-turut?
+                        <strong>2. Riwayat Penyakit:</strong> Apakah anak sering mengalami panyakit infeksi berulang seperti diare, ISPA/batuk lama, atau demam tinggi?
                     </label>
                 </div>
 
@@ -241,26 +264,19 @@
                 <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
                     <input type="checkbox" id="stuntingQ3" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
                     <label for="stuntingQ3" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>3. Riwayat Penyakit:</strong> Apakah anak sering mengalami penyakit infeksi berulang seperti diare, batuk lama, atau demam dalam kurun waktu yang sering?
-                    </label>
-                </div>
-
-                <!-- Pertanyaan 4 -->
-                <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
-                    <input type="checkbox" id="stuntingQ4" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
-                    <label for="stuntingQ4" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>4. Asupan Gizi/ASI:</strong> Apakah anak sulit makan atau asupan Gizi Seimbang & ASI Eksklusif kurang terpenuhi secara optimal?
+                        <strong>3. Asupan Gizi/ASI:</strong> Apakah anak mengalami masalah makan (GTM/sulit makan) atau asupan Protein Hewani & ASI kurang optimal?
                     </label>
                 </div>
             </div>
 
             <!-- Tombol Cek Hasil -->
-            <button onclick="cekHasilStunting()" class="w-full bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold py-2.5 rounded-xl transition shadow-md">
-                Lihat Hasil Analisis Dini
+            <button onclick="cekHasilStunting()" class="w-full bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold py-2.5 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                <i class="fas fa-search"></i> Lihat Hasil Analisis Dini
             </button>
 
             <!-- Kotak Hasil -->
             <div id="hasilStunting" class="hidden p-4 rounded-xl border text-center text-xs space-y-1">
+                <p id="ringkasanFisikStunting" class="text-gray-500 text-[11px] mb-1">--</p>
                 <p id="judulHasilStunting" class="font-bold text-sm">--</p>
                 <p id="pesanHasilStunting" class="text-gray-600 leading-relaxed">--</p>
             </div>
@@ -269,7 +285,7 @@
 
     </div>
 </section>
-
+    
 <!-- SCRIPT LOGIKA PERHITUNGAN -->
 <script>
     function hitungBMI() {
@@ -323,36 +339,56 @@
         document.getElementById('hasilHPL').classList.remove('hidden');
         document.getElementById('tglHPL').innerText = hplFormatted;
     }
+
+<!-- SCRIPT LOGIKA SKRINING DENGAN PERHITUNGAN BB/TB -->    
 function cekHasilStunting() {
+        const usia = parseInt(document.getElementById('stuntingUsia').value);
+        const bb = parseFloat(document.getElementById('stuntingBB').value);
+        const tb = parseFloat(document.getElementById('stuntingTB').value);
+
+        if (isNaN(usia) || isNaN(bb) || isNaN(tb) || usia < 0 || bb <= 0 || tb <= 0) {
+            alert('Mohon isi Usia, Berat Badan, dan Tinggi Badan anak dengan benar!');
+            return;
+        }
+
         const q1 = document.getElementById('stuntingQ1').checked;
         const q2 = document.getElementById('stuntingQ2').checked;
         const q3 = document.getElementById('stuntingQ3').checked;
-        const q4 = document.getElementById('stuntingQ4').checked;
 
-        let jumlahYa = 0;
-        if (q1) jumlahYa++;
-        if (q2) jumlahYa++;
-        if (q3) jumlahYa++;
-        if (q4) jumlahYa++;
+        let skorRisiko = 0;
+
+        // Analisis Sederhana Rasio Tinggi Terhadap Usia (Aproksimasi)
+        // Rata-rata TB lahir ~50cm, bertambah ~1.5-2cm/bulan pada tahun pertama
+        const estimasiTBNormalMin = 48 + (usia * 1.1); 
+
+        if (tb < estimasiTBNormalMin) {
+            skorRisiko += 2; // Risiko lebih tinggi jika TB di bawah estimasi rata-rata usia
+        }
+
+        if (q1) skorRisiko += 1;
+        if (q2) skorRisiko += 1;
+        if (q3) skorRisiko += 1;
 
         const containerHasil = document.getElementById('hasilStunting');
+        const ringkasan = document.getElementById('ringkasanFisikStunting');
         const judul = document.getElementById('judulHasilStunting');
         const pesan = document.getElementById('pesanHasilStunting');
 
         containerHasil.classList.remove('hidden');
+        ringkasan.innerText = `Data Input: Usia ${usia} Bulan | BB ${bb} kg | TB ${tb} cm`;
 
-        if (jumlahYa === 0) {
+        if (skorRisiko === 0) {
             containerHasil.className = 'p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs space-y-1';
-            judul.innerText = '✅ Risiko Rendah (Normal)';
-            pesan.innerText = 'Pertahankan pola gizi seimbang, ASI eksklusif/lanjutan, serta rutin melakukan penimbangan di Posyandu setiap bulan.';
-        } else if (jumlahYa <= 2) {
+            judul.innerText = '✅ Pertumbuhan Sesuai (Risiko Rendah)';
+            pesan.innerText = 'Pertahankan pemberian ASI/MPASI gizi seimbang kaya protein hewani, serta rutin menimbang di Posyandu setiap bulan.';
+        } else if (skorRisiko <= 2) {
             containerHasil.className = 'p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1';
-            judul.innerText = '⚠️ Perlu Perhatian & Konsultasi (Risiko Sedang)';
-            pesan.innerText = 'Disarankan untuk berkonsultasi dengan Petugas Gizi / Bidan Posyandu di UPTD Puskesmas Haur Gading untuk konseling gizi dan evaluasi tumbuh kembang anak.';
+            judul.innerText = '⚠️ Perlu Evaluasi Gizi (Risiko Sedang)';
+            pesan.innerText = 'Disarankan untuk berkonsultasi dengan Petugas Gizi / Bidan Posyandu di UPTD Puskesmas Haur Gading untuk konseling gizi dan pencatatan grafik KMS yang lebih akurat.';
         } else {
             containerHasil.className = 'p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 text-xs space-y-1';
             judul.innerText = '🚨 Memerlukan Pemeriksaan Lanjutan (Risiko Tinggi)';
-            pesan.innerText = 'Sangat disarankan untuk segera membawa anak ke Poli KIA / Gizi UPTD Puskesmas Haur Gading untuk pemeriksaan tumbuh kembang secara menyeluruh.';
+            pesan.innerText = 'Sangat disarankan untuk segera membawa anak ke Poli KIA / Gizi UPTD Puskesmas Haur Gading untuk pemeriksaan plotting Kurva WHO secara menyeluruh oleh petugas medis.';
         }
     }
 </script>

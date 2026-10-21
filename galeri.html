@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Dokumentasi & Edukasi - UPTD Puskesmas Haur Gading</title>
+    <title>Galeri Dokumentasi - UPTD Puskesmas Haur Gading</title>
     <!-- Framework Tampilan Tailwind CSS & Font Awesome Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -50,146 +50,91 @@
     <section class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-emerald-900 text-white py-8 px-4 text-center shadow-sm">
         <div class="container mx-auto max-w-4xl">
             <span class="inline-flex items-center gap-1.5 bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[10px] font-extrabold uppercase tracking-widest px-3 py-0.5 rounded-full mb-2">
-                <i class="fas fa-photo-video"></i> Dokumentasi & Media Digital
+                <i class="fas fa-camera"></i> Dokumentasi Kegiatan
             </span>
-            <h2 class="text-2xl md:text-3xl font-bold">Galeri Dokumentasi & Edukasi</h2>
-            <p class="text-xs md:text-sm text-emerald-100 mt-1">Dokumentasi foto kegiatan lapangan, video edukasi kesehatan, dan poster infografis resmi</p>
+            <h2 class="text-2xl md:text-3xl font-bold">Galeri Dokumentasi Lapangan</h2>
+            <p class="text-xs md:text-sm text-emerald-100 mt-1">Dokumentasi foto kegiatan program kesehatan dan pelayanan medis langsung di wilayah kerja</p>
         </div>
     </section>
 
     <!-- 3. KONTEN UTAMA GALERI -->
     <main class="container mx-auto px-4 my-8 max-w-6xl flex-grow space-y-8">
 
-        <!-- Header Filter Tab -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 pb-4">
-            <div>
-                <h3 class="text-xl font-bold text-emerald-800">Koleksi Media Kesehatan</h3>
-                <p class="text-xs text-gray-500 mt-0.5">Pilih kategori media yang ingin Anda tampilkan</p>
-            </div>
+        <!-- Grid Foto Dokumentasi -->
+        <section>
+            <h3 class="text-xl font-bold text-emerald-800 mb-6 flex items-center gap-2">
+                <i class="fas fa-images text-emerald-600"></i> Foto Kegiatan Terbaru
+            </h3>
 
-            <!-- Tombol Filter -->
-            <div class="flex flex-wrap items-center gap-2 bg-gray-100 p-1.5 rounded-xl text-xs font-semibold">
-                <button onclick="filterGaleri('semua')" id="tab-semua" class="btn-filter bg-emerald-700 text-white px-3.5 py-1.5 rounded-lg transition shadow-sm">
-                    Semua
-                </button>
-                <button onclick="filterGaleri('foto')" id="tab-foto" class="btn-filter text-gray-600 hover:text-emerald-800 px-3.5 py-1.5 rounded-lg transition">
-                    <i class="fas fa-camera mr-1"></i> Foto Kegiatan
-                </button>
-                <button onclick="filterGaleri('video')" id="tab-video" class="btn-filter text-gray-600 hover:text-emerald-800 px-3.5 py-1.5 rounded-lg transition">
-                    <i class="fas fa-video mr-1"></i> Video Reels
-                </button>
-                <button onclick="filterGaleri('infografis')" id="tab-infografis" class="btn-filter text-gray-600 hover:text-emerald-800 px-3.5 py-1.5 rounded-lg transition">
-                    <i class="fas fa-image mr-1"></i> Infografis
-                </button>
-            </div>
-        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-        <!-- GRID UTAMA GALERI MEDIA -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- Item 1: Foto Kegiatan Lapangan -->
-            <div class="item-galeri item-foto bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                <img src="assets/foto-kegiatan/galeri1.jpg" alt="Pemeriksaan Jentik" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Kesling'">
-                <div class="p-4">
-                    <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Foto Kegiatan</span>
-                    <h4 class="font-bold text-sm text-gray-800 mt-2">Inspeksi Kesehatan Lingkungan</h4>
-                    <p class="text-xs text-gray-500 mt-1">Pemeriksaan jentik berkala oleh tim sanitasi Puskesmas</p>
-                </div>
-            </div>
-
-            <!-- Item 2: Video Reels (Demam Berdarah) -->
-            <div class="item-galeri item-video bg-gray-900 rounded-xl overflow-hidden shadow-md border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
-                <img src="assets/penyuluhan.jpg" alt="Video DBD" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x600?text=Video+Penyuluhan+DBD'">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-between">
-                    <div class="flex justify-between items-center">
-                        <span class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                            <i class="fas fa-video"></i> Video Reels
-                        </span>
-                        <span class="text-white/80 text-[10px] bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-full">0:59</span>
-                    </div>
-
-                    <a href="https://www.youtube.com/" target="_blank" class="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/40 hover:bg-emerald-600 rounded-full flex items-center justify-center text-white text-lg mx-auto transition transform group-hover:scale-110">
-                        <i class="fas fa-play ml-1"></i>
-                    </a>
-
-                    <div>
-                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">Gerakan 3M Plus: Cegah Nyamuk DBD di Lingkungan Rumah</h4>
-                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
-                            <i class="fab fa-instagram text-pink-400"></i> @puskesmas_haurgading
-                        </p>
+                <!-- Item Foto 1 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri1.jpg" alt="Pemeriksaan Jentik" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Kesling'">
+                    <div class="p-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Kesling</span>
+                        <h4 class="font-bold text-sm text-gray-800 mt-2">Inspeksi Kesehatan Lingkungan</h4>
+                        <p class="text-xs text-gray-500 mt-1">Pemeriksaan jentik berkala oleh tim sanitasi Puskesmas</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Item 3: Infografis Poster (Stunting) -->
-            <div class="item-galeri item-infografis bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
-                <img src="assets/skm.png" alt="Infografis Stunting" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x600?text=Infografis+Stunting'">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-between">
-                    <div class="flex justify-between items-center">
-                        <span class="bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                            <i class="fas fa-image"></i> Infografis
-                        </span>
-                    </div>
-
-                    <div>
-                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">Pentingnya Protein Hewani untuk Cegah Stunting Balita</h4>
-                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
-                            <i class="fas fa-heart text-red-500"></i> Edukasi Gizi KIA
-                        </p>
+                <!-- Item Foto 2 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri2.jpg" alt="Posyandu Balita" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Posyandu'">
+                    <div class="p-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">KIA & Gizi</span>
+                        <h4 class="font-bold text-sm text-gray-800 mt-2">Pelayanan Posyandu Integrasi</h4>
+                        <p class="text-xs text-gray-500 mt-1">Penimbangan balita dan pemberian vitamin A rutin</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Item 4: Foto Kegiatan Lapangan -->
-            <div class="item-galeri item-foto bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                <img src="assets/foto-kegiatan/galeri2.jpg" alt="Posyandu Balita" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Posyandu'">
-                <div class="p-4">
-                    <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Foto Kegiatan</span>
-                    <h4 class="font-bold text-sm text-gray-800 mt-2">Pelayanan Posyandu Integrasi</h4>
-                    <p class="text-xs text-gray-500 mt-1">Penimbangan balita dan pemberian vitamin A rutin</p>
-                </div>
-            </div>
-
-            <!-- Item 5: Video Reels (Hipertensi Lansia) -->
-            <div class="item-galeri item-video bg-gray-900 rounded-xl overflow-hidden shadow-md border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full">
-                <img src="assets/lansia.jpg" alt="Video Hipertensi" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x600?text=Video+Kesehatan+Lansia'">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-between">
-                    <div class="flex justify-between items-center">
-                        <span class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                            <i class="fas fa-video"></i> Video Reels
-                        </span>
-                        <span class="text-white/80 text-[10px] bg-black/40 backdrop-blur-md px-2 py-0.5 rounded-full">1:15</span>
-                    </div>
-
-                    <a href="https://www.youtube.com/" target="_blank" class="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/40 hover:bg-emerald-600 rounded-full flex items-center justify-center text-white text-lg mx-auto transition transform group-hover:scale-110">
-                        <i class="fas fa-play ml-1"></i>
-                    </a>
-
-                    <div>
-                        <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">Tips Mengontrol Tekanan Darah untuk Lansia Sehat</h4>
-                        <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
-                            <i class="fab fa-youtube text-red-500"></i> Puskesmas Haur Gading
-                        </p>
+                <!-- Item Foto 3 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri3.jpg" alt="Lokakarya Mini" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Lokmin'">
+                    <div class="p-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Manajemen</span>
+                        <h4 class="font-bold text-sm text-gray-800 mt-2">Lokakarya Mini Lintas Sektor</h4>
+                        <p class="text-xs text-gray-500 mt-1">Koordinasi program kerja bersama aparat kecamatan</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Item 6: Foto Kegiatan Lapangan -->
-            <div class="item-galeri item-foto bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                <img src="assets/foto-kegiatan/galeri3.jpg" alt="Lokakarya Mini" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Lokmin'">
-                <div class="p-4">
-                    <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Foto Kegiatan</span>
-                    <h4 class="font-bold text-sm text-gray-800 mt-2">Lokakarya Mini Lintas Sektor</h4>
-                    <p class="text-xs text-gray-500 mt-1">Koordinasi program kerja bersama aparat kecamatan</p>
+                <!-- Item Foto 4 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri4.jpg" alt="Pemeriksaan Lansia" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Lansia'">
+                    <div class="p-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Posyandu Lansia</span>
+                        <h4 class="font-bold text-sm text-gray-800 mt-2">Posyandu Lansia Mandiri</h4>
+                        <p class="text-xs text-gray-500 mt-1">Pemeriksaan kesehatan rutin untuk para lansia desa</p>
+                    </div>
                 </div>
-            </div>
 
-        </div>
+                <!-- Item Foto 5 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri5.jpg" alt="Penyuluhan Sekolah" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Penyuluhan'">
+                    <div class="p-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">UKS</span>
+                        <h4 class="font-bold text-sm text-gray-800 mt-2">Edukasi Kesehatan Remaja</h4>
+                        <p class="text-xs text-gray-500 mt-1">Penyuluhan gizi seimbang dan PHBS di sekolah dasar/menengah</p>
+                    </div>
+                </div>
+
+                <!-- Item Foto 6 -->
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <img src="assets/foto-kegiatan/galeri6.jpg" alt="Puskesmas Keliling" class="w-full h-48 object-cover bg-gray-200" onerror="this.src='https://via.placeholder.com/400x300?text=Dokumentasi+Pusling'">
+                    <div class="p-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded">Pusling</span>
+                        <h4 class="font-bold text-sm text-gray-800 mt-2">Pelayanan Puskesmas Keliling</h4>
+                        <p class="text-xs text-gray-500 mt-1">Jemput bola pelayanan kesehatan hingga ke pelosok desa</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Tautan ke Media Sosial Resmi -->
         <section class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl text-center max-w-2xl mx-auto mt-10">
-            <h4 class="font-bold text-emerald-900 mb-1">Ingin Melihat Media Harian Terkini?</h4>
-            <p class="text-xs text-gray-600 mb-4">Kunjungi dan ikuti akun media sosial resmi UPTD Puskesmas Haur Gading untuk informasi harian.</p>
+            <h4 class="font-bold text-emerald-900 mb-1">Ingin Melihat Dokumentasi Harian Terkini?</h4>
+            <p class="text-xs text-gray-600 mb-4">Kunjungi dan ikuti akun media sosial resmi UPTD Puskesmas Haur Gading untuk pembaruan foto dan video harian.</p>
             <div class="flex flex-wrap justify-center gap-3">
                 <a href="https://instagram.com/" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white font-bold px-4 py-2 rounded-xl text-xs transition flex items-center gap-1.5 shadow-sm">
                     <i class="fab fa-instagram text-sm"></i> Instagram Resmi
@@ -202,40 +147,6 @@
 
     </main>
 
-    <!-- Kartu Link Langsung Instagram Reels -->
-<a href="https://www.instagram.com/reel/KODE_REEL_ANDA/" target="_blank" rel="noopener noreferrer" 
-   class="item-galeri item-video bg-gray-900 rounded-2xl overflow-hidden shadow-md border border-gray-100 relative group flex flex-col justify-between aspect-[9/16] max-h-[420px] mx-auto w-full block">
-    
-    <!-- Cover/Thumbnail Video -->
-    <img src="assets/penyuluhan.jpg" alt="Preview Video Reels" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
-    
-    <!-- Overlay Gradient & Badge IG -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-between">
-        <div class="flex justify-between items-center">
-            <span class="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                <i class="fab fa-instagram"></i> Reels IG
-            </span>
-            <span class="text-white/90 text-[10px] bg-black/50 backdrop-blur-md px-2 py-0.5 rounded-full">
-                <i class="fas fa-external-link-alt text-[9px]"></i> Tonton di IG
-            </span>
-        </div>
-
-        <!-- Tombol Play Tengah -->
-        <div class="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/40 group-hover:bg-pink-600 rounded-full flex items-center justify-center text-white text-lg mx-auto transition transform group-hover:scale-110">
-            <i class="fas fa-play ml-1"></i>
-        </div>
-
-        <div>
-            <h4 class="text-white font-bold text-xs leading-snug line-clamp-2">
-                Gerakan 3M Plus: Cegah Nyamuk DBD di Lingkungan Rumah
-            </h4>
-            <p class="text-[10px] text-gray-300 mt-1 flex items-center gap-1">
-                @puskesmas_haurgading
-            </p>
-        </div>
-    </div>
-</a>
-    
     <!-- 4. FOOTER / KONTAK -->
     <footer class="bg-emerald-900 text-white py-8 text-sm mt-auto">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -263,40 +174,5 @@
         </div>
     </footer>
 
-    <!-- SCRIPT FILTER TAB GALERI MEDIA -->
-    <script>
-        function filterGaleri(kategori) {
-            const items = document.querySelectorAll('.item-galeri');
-            const buttons = document.querySelectorAll('.btn-filter');
-
-            // Reset style tombol filter
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-emerald-700', 'text-white', 'shadow-sm');
-                btn.classList.add('text-gray-600');
-            });
-
-            // Set tombol aktif
-            const activeBtn = document.getElementById('tab-' + kategori);
-            if (activeBtn) {
-                activeBtn.classList.add('bg-emerald-700', 'text-white', 'shadow-sm');
-                activeBtn.classList.remove('text-gray-600');
-            }
-
-            // Tampilkan/sembunyikan item
-            items.forEach(item => {
-                if (kategori === 'semua') {
-                    item.classList.remove('hidden');
-                } else if (kategori === 'foto' && item.classList.contains('item-foto')) {
-                    item.classList.remove('hidden');
-                } else if (kategori === 'video' && item.classList.contains('item-video')) {
-                    item.classList.remove('hidden');
-                } else if (kategori === 'infografis' && item.classList.contains('item-infografis')) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
-        }
-    </script>
 </body>
 </html>

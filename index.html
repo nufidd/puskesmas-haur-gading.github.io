@@ -147,10 +147,10 @@
             <!-- SISI KANAN: CAROUSEL SLIDE GAMBAR (5 Kolom) -->
             <div class="lg:col-span-5 flex flex-col items-center justify-center">
                 
-                <div class="bg-white p-2.5 rounded-2xl shadow-xl border border-emerald-600/40 overflow-hidden relative group w-full max-w-[290px] mx-auto">
+                <div class="bg-white p-2.5 rounded-2xl shadow-xl border border-emerald-600/40 overflow-hidden relative group w-full max-w-[280px] mx-auto">
                     
                     <!-- CONTAINER GAMBAR SLIDE -->
-                    <div class="relative w-full h-[410px] overflow-hidden rounded-xl flex items-center justify-center bg-gray-50">
+                    <div class="relative w-full h-[390px] overflow-hidden rounded-xl flex items-center justify-center bg-gray-50">
                         
                         <!-- Slide 1: Papan Pelayanan -->
                         <div class="hero-slide active w-full h-full flex items-center justify-center transition-opacity duration-500">
@@ -168,27 +168,26 @@
                                  onclick="window.open(this.src, '_blank')">
                         </div>
 
-                        <!-- Slide 3: Pengumuman Libur / Informasi -->
+                        <!-- Slide 3: Pengumuman -->
                         <div class="hero-slide hidden w-full h-full flex items-center justify-center transition-opacity duration-500">
-                            <img src="assets/pengumuman-libur.jpg" 
-                                 alt="Pengumuman Pelayanan & Libur" 
+                            <img src="assets/penyuluhan.jpg" 
+                                 alt="Kegiatan Penyuluhan & Pengumuman" 
                                  class="w-full h-full object-contain cursor-pointer"
-                                 onerror="this.src='https://via.placeholder.com/300x500?text=Pengumuman+Resmi'"
                                  onclick="window.open(this.src, '_blank')">
                         </div>
 
                     </div>
 
                     <!-- TOMBOL NAVIGASI KIRI & KANAN -->
-                    <button onclick="pindahSlide(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md">
+                    <button onclick="pindahSlide(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-7 h-7 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md">
                         <i class="fas fa-chevron-left text-xs"></i>
                     </button>
-                    <button onclick="pindahSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md">
+                    <button onclick="pindahSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-7 h-7 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md">
                         <i class="fas fa-chevron-right text-xs"></i>
                     </button>
 
-                    <!-- INDIKATOR DOTS DI BAWAH -->
-                    <div class="flex justify-center gap-1.5 mt-2.5">
+                    <!-- INDIKATOR DOTS -->
+                    <div class="flex justify-center gap-1.5 mt-2">
                         <button onclick="setSlide(0)" class="dot-slide w-2.5 h-2.5 rounded-full bg-emerald-600 transition-all"></button>
                         <button onclick="setSlide(1)" class="dot-slide w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"></button>
                         <button onclick="setSlide(2)" class="dot-slide w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"></button>
@@ -582,7 +581,8 @@
     setInterval(updateWaktu, 1000);
 
 <!-- SCRIPT LOGIKA SLIDE BANNER (CAROUSEL) -->
-let slideIndex = 0;
+// 1. CAROUSEL SLIDE LOGIC
+    let slideIndex = 0;
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot-slide');
     const teksKeterangan = document.getElementById('keteranganSlide');
@@ -590,27 +590,26 @@ let slideIndex = 0;
     const daftarKeterangan = [
         '<i class="fas fa-info-circle text-amber-400"></i> Papan informasi pelayanan resmi',
         '<i class="fas fa-chart-bar text-amber-400"></i> Hasil Survei Kepuasan Masyarakat (SKM)',
-        '<i class="fas fa-bullhorn text-amber-400"></i> Pengumuman resmi & jadwal pelayanan'
+        '<i class="fas fa-bullhorn text-amber-400"></i> Informasi & Edukasi Kesehatan'
     ];
 
     function tampilkanSlide(index) {
+        if (slides.length === 0) return;
         if (index >= slides.length) slideIndex = 0;
         if (index < 0) slideIndex = slides.length - 1;
 
         slides.forEach((slide, i) => {
             if (i === slideIndex) {
                 slide.classList.remove('hidden');
-                slide.classList.add('active');
             } else {
                 slide.classList.add('hidden');
-                slide.classList.remove('active');
             }
         });
 
         dots.forEach((dot, i) => {
             if (i === slideIndex) {
                 dot.classList.remove('bg-gray-300');
-                dot.classList.add('bg-emerald-600', 'w-5'); // Efek dot panjang aktif
+                dot.classList.add('bg-emerald-600', 'w-5');
             } else {
                 dot.classList.remove('bg-emerald-600', 'w-5');
                 dot.classList.add('bg-gray-300', 'w-2.5');
@@ -632,13 +631,20 @@ let slideIndex = 0;
         tampilkanSlide(slideIndex);
     }
 
-    // Ganti slide otomatis setiap 5 detik
     setInterval(() => {
         pindahSlide(1);
     }, 5000);
 
-    // Jalankan pertama kali saat halaman dimuat
     tampilkanSlide(slideIndex);
+
+    // 2. PERBAIKAN ERROR JS LINE 575 (PERIKSAAN ELEMEN NULL)
+    function updateWaktu() {
+        const elemWaktu = document.getElementById('waktuLive'); // ganti dengan ID elemen jam jika ada
+        if (elemWaktu) {
+            const sekarang = new Date();
+            elemWaktu.innerText = sekarang.toLocaleTimeString('id-ID');
+        }
+    }
 </script>
 </body>
 </html>

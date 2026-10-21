@@ -48,13 +48,6 @@
             <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
         </nav>
     </div>
-    
-            <!-- Catatan Jam Pelayanan / Running Text (Sisi Kanan) -->
-            <div class="hidden sm:block text-emerald-100 text-[11px]">
-                <span class="font-bold text-amber-300">Jam Layanan:</span> Senin–Kamis (08.00–12.00 WITA) | Jumat (08.00–10.30 WITA) | Sabtu (08.00–11.30 WITA)
-            </div>
-        </div>
-    </div>
 
     <!-- Menu Mobile Navigasi Ringkas -->
     <div class="md:hidden bg-emerald-900 px-4 py-2 flex justify-between text-xs font-medium border-t border-emerald-800">
@@ -81,14 +74,14 @@
         </div>
     </div>
 
-<!-- HERO COMPACT & PAPAN PELAYANAN RESMI (BERANDA) -->
+<!-- HERO COMPACT & PAPAN PELAYANAN RESMI (VERSI FOTO LEBIH BESAR) -->
 <section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-950 text-white py-8 border-b border-emerald-700/50">
     <div class="container mx-auto px-4 max-w-6xl">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <!-- SISIK KIRI: HERO RINGKAS & WAKTU PELAYANAN (7 Kolom) -->
-            <div class="lg:col-span-7 flex flex-col justify-between space-y-5">
+            <!-- SISI KIRI: HERO RINGKAS & WAKTU PELAYANAN (6 Kolom) -->
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-5">
                 
                 <!-- Hero Compact Text -->
                 <div class="space-y-2">
@@ -103,7 +96,7 @@
                     </p>
                 </div>
 
-                <!-- SUB-HEADER: WAKTU & JADWAL OPERASIONAL (Rapi & Tidak Mepet) -->
+                <!-- SUB-HEADER: WAKTU & JADWAL OPERASIONAL -->
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 space-y-3">
                     <div class="flex items-center justify-between border-b border-white/10 pb-2">
                         <h4 class="font-bold text-xs md:text-sm text-amber-300 flex items-center gap-1.5">
@@ -149,13 +142,17 @@
 
             </div>
 
-            <!-- SISI KANAN: FOTO PAPAN PELAYANAN RESMI (5 Kolom) -->
-            <div class="lg:col-span-5 flex flex-col items-center justify-center">
-                <div class="bg-white p-2 rounded-2xl shadow-2xl border border-emerald-600/40 overflow-hidden group w-full max-w-sm">
-                    <img src="assets/papan-pelayanan.jpg" alt="Papan Jenis & Waktu Pelayanan UPTD Puskesmas Haur Gading" class="w-full rounded-xl object-contain max-h-[380px] mx-auto group-hover:scale-102 transition duration-300">
+            <!-- SISI KANAN: FOTO PAPAN PELAYANAN LEBIH BESAR (6 Kolom) -->
+            <div class="lg:col-span-6 flex flex-col items-center justify-center">
+                <div class="bg-white p-3 rounded-2xl shadow-2xl border border-emerald-600/40 overflow-hidden group w-full max-w-md">
+                    <!-- Foto Diperbesar tanpa max-h pembatas -->
+                    <img src="assets/papan-pelayanan.jpg" 
+                         alt="Papan Jenis & Waktu Pelayanan UPTD Puskesmas Haur Gading" 
+                         class="w-full h-auto rounded-xl object-contain shadow-sm group-hover:scale-[1.02] transition duration-300 cursor-pointer"
+                         onclick="window.open(this.src, '_blank')">
                 </div>
-                <p class="text-[10px] text-emerald-200 italic mt-2 text-center flex items-center gap-1">
-                    <i class="fas fa-info-circle text-amber-400"></i> Papan informasi pelayanan resmi di lokasi Puskesmas Haur Gading
+                <p class="text-[11px] text-emerald-200 italic mt-2.5 text-center flex items-center justify-center gap-1">
+                    <i class="fas fa-search-plus text-amber-400"></i> Papan informasi resmi (Klik foto untuk memperbesar penuh)
                 </p>
             </div>
 

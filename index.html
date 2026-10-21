@@ -142,17 +142,17 @@
 
             </div>
 
-            <!-- SISI KANAN: FOTO PAPAN PELAYANAN LEBIH BESAR (6 Kolom) -->
-            <div class="lg:col-span-6 flex flex-col items-center justify-center">
-                <div class="bg-white p-3 rounded-2xl shadow-2xl border border-emerald-600/40 overflow-hidden group w-full max-w-md">
-                    <!-- Foto Diperbesar tanpa max-h pembatas -->
+            <!-- SISI KANAN: FOTO PAPAN PELAYANAN (PROPORSI PAS & TIDAK TERPOTONG) -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                <div class="bg-white p-2.5 rounded-2xl shadow-xl border border-emerald-600/40 overflow-hidden group w-full max-w-[280px] mx-auto">
+                    <!-- Pembatas tinggi max-h-[420px] agar pas & object-contain agar foto utuh -->
                     <img src="assets/papan-pelayanan.jpg" 
                          alt="Papan Jenis & Waktu Pelayanan UPTD Puskesmas Haur Gading" 
-                         class="w-full h-auto rounded-xl object-contain shadow-sm group-hover:scale-[1.02] transition duration-300 cursor-pointer"
+                         class="w-full h-auto max-h-[420px] object-contain mx-auto rounded-xl shadow-xs group-hover:scale-[1.02] transition duration-300 cursor-pointer"
                          onclick="window.open(this.src, '_blank')">
                 </div>
-                <p class="text-[11px] text-emerald-200 italic mt-2.5 text-center flex items-center justify-center gap-1">
-                    <i class="fas fa-search-plus text-amber-400"></i> Papan informasi resmi (Klik foto untuk memperbesar penuh)
+                <p class="text-[10px] text-emerald-200 italic mt-2 text-center flex items-center justify-center gap-1">
+                    <i class="fas fa-search-plus text-amber-400"></i> Klik foto untuk melihat ukuran penuh
                 </p>
             </div>
 

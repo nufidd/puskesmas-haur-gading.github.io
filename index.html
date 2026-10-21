@@ -48,16 +48,7 @@
             <a href="pengaduan.html" class="hover:text-amber-200 transition">Pengaduan</a>
         </nav>
     </div>
-
-    <!-- SUB-HEADER: WAKTU & INFORMASI (Membuat Tampilan Rapi & Tidak Mepet) -->
-    <div class="bg-emerald-800 text-white text-xs py-1.5 px-4 border-t border-emerald-600/50">
-        <div class="container mx-auto flex flex-wrap justify-between items-center gap-2">
-            <!-- Widget Jam & Tanggal (Sisi Kiri) -->
-            <div class="inline-flex items-center space-x-2 bg-emerald-900/60 text-amber-300 px-3 py-1 rounded-md border border-emerald-600/40 font-medium">
-                <i class="far fa-clock"></i>
-                <span id="live-datetime">Memuat tanggal & waktu...</span>
-            </div>
-
+    
             <!-- Catatan Jam Pelayanan / Running Text (Sisi Kanan) -->
             <div class="hidden sm:block text-emerald-100 text-[11px]">
                 <span class="font-bold text-amber-300">Jam Layanan:</span> Senin–Kamis (08.00–12.00 WITA) | Jumat (08.00–10.30 WITA) | Sabtu (08.00–11.30 WITA)
@@ -90,130 +81,82 @@
         </div>
     </div>
 
-    <<!-- HERO COMPACT & POSTER LAYANAN UNGGULAN -->
-<section class="bg-emerald-800 text-white py-8 px-4">
-    <div class="container mx-auto max-w-6xl">
-        
-        <!-- Header Ringkas (Gantikan Banner Besar) -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-700/60 pb-6 mb-6">
-            <div>
-                <span class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full">Selamat Datang</span>
-                <h2 class="text-xl md:text-2xl font-bold mt-2">Pelayanan Kesehatan Berkualitas & Terjangkau</h2/>
-                <p class="text-xs text-emerald-100 mt-1 max-w-2xl">Website Puskesmas Haur Gading. Memberikan kemudahan informasi pendaftaran, layanan kesehatan, dan aduan masyarakat.</p>
-            </div>
-            <!-- Tombol Aksi Ringkas -->
-            <div class="flex items-center gap-2 shrink-0">
-                <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition">Daftar Online</a>
-                <a href="pengaduan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs px-4 py-2.5 rounded-xl border border-emerald-500 transition">Pengaduan</a>
-            </div>
-        </div>
-
-<!-- SEKSI JENIS & WAKTU PELAYANAN RESMI (PENGGANTI LAYANAN UNGGULAN) -->
-<section class="py-10 bg-emerald-900 text-white border-y border-emerald-800">
+<!-- HERO COMPACT & PAPAN PELAYANAN RESMI (BERANDA) -->
+<section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-950 text-white py-8 border-b border-emerald-700/50">
     <div class="container mx-auto px-4 max-w-6xl">
         
-        <!-- Header Section -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 border-b border-emerald-800 pb-4">
-            <div>
-                <span class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-                    Informasi Resmi
-                </span>
-                <h3 class="text-xl md:text-2xl font-bold mt-2">Jenis & Waktu Pelayanan Puskesmas</h3>
-                <p class="text-xs text-emerald-200 mt-1">Daftar layanan medis resmi dan jam operasional di UPTD Puskesmas Haur Gading</p>
-            </div>
-            <a href="layanan.html" class="text-xs text-amber-300 hover:text-amber-200 font-bold transition flex items-center gap-1 shrink-0">
-                Detail Layanan Lengkap &rarr;
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
             
-            <!-- FOTO BALIHO PELAYANAN RESMI (4 Kolom) -->
-            <div class="lg:col-span-4 flex flex-col items-center">
-                <div class="bg-white p-2 rounded-2xl shadow-xl border border-emerald-700/50 overflow-hidden group max-w-xs w-full">
-                    <img src="assets/papan-pelayanan.jpg" alt="Papan Jenis Pelayanan UPTD Puskesmas Haur Gading" class="w-full rounded-xl object-contain group-hover:scale-102 transition duration-300">
+            <!-- SISIK KIRI: HERO RINGKAS & WAKTU PELAYANAN (7 Kolom) -->
+            <div class="lg:col-span-7 flex flex-col justify-between space-y-5">
+                
+                <!-- Hero Compact Text -->
+                <div class="space-y-2">
+                    <span class="inline-flex items-center gap-1.5 bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full shadow-sm">
+                        <i class="fas fa-hospital"></i> Selamat Datang
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold leading-tight">
+                        Pelayanan Kesehatan Prima & Terintegrasi
+                    </h2>
+                    <p class="text-xs md:text-sm text-emerald-100 leading-relaxed">
+                        UPTD Puskesmas Haur Gading siap memberikan pelayanan kesehatan berkualitas, ramah, dan profesional bagi seluruh masyarakat Kecamatan Haur Gading.
+                    </p>
                 </div>
-                <p class="text-[11px] text-emerald-300 italic mt-2 text-center">
-                    <i class="fas fa-info-circle"></i> Papan baliho informasi pelayanan di lokasi instansi
-                </p>
+
+                <!-- SUB-HEADER: WAKTU & JADWAL OPERASIONAL (Rapi & Tidak Mepet) -->
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 space-y-3">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                        <h4 class="font-bold text-xs md:text-sm text-amber-300 flex items-center gap-1.5">
+                            <i class="far fa-clock text-amber-400"></i> Jam Operasional & Pelayanan
+                        </h4>
+                        <span class="text-[10px] bg-emerald-500/30 text-emerald-200 px-2 py-0.5 rounded-md border border-emerald-400/20">
+                            Puskesmas Non-Rawat Inap
+                        </span>
+                    </div>
+
+                    <!-- Grid Waktu -->
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <div class="bg-emerald-950/50 p-2.5 rounded-xl border border-emerald-500/20">
+                            <p class="text-emerald-200 text-[10px]">Senin s/d Kamis</p>
+                            <p class="font-bold text-white text-xs mt-0.5">08.00 - 13.00 WITA</p>
+                        </div>
+                        <div class="bg-emerald-950/50 p-2.5 rounded-xl border border-emerald-500/20">
+                            <p class="text-emerald-200 text-[10px]">Jum'at</p>
+                            <p class="font-bold text-white text-xs mt-0.5">08.00 - 10.00 WITA</p>
+                        </div>
+                    </div>
+
+                    <!-- Jadwal Khusus -->
+                    <div class="flex flex-wrap gap-2 text-[10px] pt-1">
+                        <span class="bg-amber-400/20 text-amber-300 px-2.5 py-1 rounded-lg font-semibold border border-amber-400/30 flex items-center gap-1">
+                            <i class="fas fa-syringe text-amber-400"></i> Imunisasi: Selasa
+                        </span>
+                        <span class="bg-blue-400/20 text-blue-200 px-2.5 py-1 rounded-lg font-semibold border border-blue-400/30 flex items-center gap-1">
+                            <i class="fas fa-lungs text-blue-300"></i> Poli TB: Selasa & Jum'at
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tombol Aksi Cepat -->
+                <div class="flex flex-wrap gap-3 pt-1">
+                    <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-1.5">
+                        <i class="fas fa-mobile-alt"></i> Panduan Antrean Online
+                    </a>
+                    <a href="layanan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition border border-emerald-500/30 flex items-center gap-1.5">
+                        <i class="fas fa-notes-medical"></i> Lihat Semua Layanan
+                    </a>
+                </div>
+
             </div>
 
-            <!-- DAFTAR TEKS TERSTRUKTUR (8 Kolom) -->
-            <div class="lg:col-span-8 space-y-6 text-gray-800">
-                
-                <!-- Card 1: Daftar Jenis Pelayanan -->
-                <div class="bg-white p-6 rounded-2xl shadow-md space-y-4">
-                    <h4 class="font-bold text-base text-emerald-900 border-b border-gray-100 pb-2 flex items-center gap-2">
-                        <i class="fas fa-list-check text-emerald-700"></i> Jenis Pelayanan Medis & Kesehatan
-                    </h4>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">1.</span> Pemeriksaan Umum
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">2.</span> Pemeriksaan Kesehatan Gigi & Mulut
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">3.</span> Pelayanan Kesehatan Keluarga
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">4.</span> MTBS (Balita Sakit)
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">5.</span> SDIDTK (Deteksi Tumbuh Kembang)
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">6.</span> Konseling (Gizi, Kesling, Remaja, Jiwa)
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">7.</span> Imunisasi
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">8.</span> Pelayanan Tuberkulosis (TB)
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">9.</span> Tindakan Medis / Gawat Darurat
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">10.</span> Persalinan
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">11.</span> Laboratorium
-                        </div>
-                        <div class="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-100">
-                            <span class="font-bold text-emerald-800">12.</span> Farmasi & Administrasi Sehat
-                        </div>
-                    </div>
+            <!-- SISI KANAN: FOTO PAPAN PELAYANAN RESMI (5 Kolom) -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                <div class="bg-white p-2 rounded-2xl shadow-2xl border border-emerald-600/40 overflow-hidden group w-full max-w-sm">
+                    <img src="assets/papan-pelayanan.jpg" alt="Papan Jenis & Waktu Pelayanan UPTD Puskesmas Haur Gading" class="w-full rounded-xl object-contain max-h-[380px] mx-auto group-hover:scale-102 transition duration-300">
                 </div>
-
-                <!-- Card 2: Waktu & Jam Operasional -->
-                <div class="bg-amber-100/90 p-5 rounded-2xl border border-amber-200 text-xs space-y-3">
-                    <h4 class="font-bold text-sm text-amber-950 flex items-center gap-2">
-                        <i class="far fa-clock text-amber-800"></i> Jam Operasional Pelayanan
-                    </h4>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div class="bg-white p-3 rounded-xl border border-amber-200/80 shadow-2xs">
-                            <p class="text-gray-500 text-[11px]">Senin s/d Kamis</p>
-                            <p class="font-bold text-emerald-900 text-sm mt-0.5">JAM 08.00 - 13.00 WITA</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-amber-200/80 shadow-2xs">
-                            <p class="text-gray-500 text-[11px]">Jum'at</p>
-                            <p class="font-bold text-emerald-900 text-sm mt-0.5">JAM 08.00 - 10.00 WITA</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-wrap gap-2 pt-2 border-t border-amber-200 text-[11px]">
-                        <span class="bg-emerald-800 text-white px-3 py-1 rounded-lg font-bold flex items-center gap-1">
-                            <i class="fas fa-syringe"></i> Imunisasi: Setiap Selasa
-                        </span>
-                        <span class="bg-blue-800 text-white px-3 py-1 rounded-lg font-bold flex items-center gap-1">
-                            <i class="fas fa-lungs"></i> Poli TB: Selasa & Jum'at
-                        </span>
-                    </div>
-                </div>
-
+                <p class="text-[10px] text-emerald-200 italic mt-2 text-center flex items-center gap-1">
+                    <i class="fas fa-info-circle text-amber-400"></i> Papan informasi pelayanan resmi di lokasi Puskesmas Haur Gading
+                </p>
             </div>
 
         </div>

@@ -148,13 +148,13 @@
 
             </div>
 
-            <!-- SISI KANAN: CAROUSEL SLIDE GAMBAR (5 Kolom) -->
+<!-- SISI KANAN: CAROUSEL SLIDE GAMBAR (DITINGKATKAN AGAR SEJAJAR DENGAN TEKS KIRI) -->
             <div class="lg:col-span-5 flex flex-col items-center justify-center">
                 
-                <div class="bg-white p-2.5 rounded-2xl shadow-xl border border-emerald-600/40 overflow-hidden relative group w-full max-w-[280px] mx-auto">
+                <div class="bg-white p-3 rounded-2xl shadow-xl border border-emerald-600/40 overflow-hidden relative group w-full max-w-[340px] mx-auto">
                     
-                    <!-- CONTAINER GAMBAR SLIDE -->
-                    <div class="relative w-full h-[390px] overflow-hidden rounded-xl flex items-center justify-center bg-gray-50">
+                    <!-- CONTAINER GAMBAR SLIDE (Tinggi ditingkatkan menjadi h-[460px]) -->
+                    <div class="relative w-full h-[460px] overflow-hidden rounded-xl flex items-center justify-center bg-gray-50">
                         
                         <!-- Slide 1: Papan Pelayanan -->
                         <div class="hero-slide active w-full h-full flex items-center justify-center transition-opacity duration-500">
@@ -183,15 +183,15 @@
                     </div>
 
                     <!-- TOMBOL NAVIGASI KIRI & KANAN -->
-                    <button onclick="pindahSlide(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-7 h-7 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md">
+                    <button onclick="pindahSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md z-10">
                         <i class="fas fa-chevron-left text-xs"></i>
                     </button>
-                    <button onclick="pindahSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-7 h-7 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md">
+                    <button onclick="pindahSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md z-10">
                         <i class="fas fa-chevron-right text-xs"></i>
                     </button>
 
                     <!-- INDIKATOR DOTS -->
-                    <div class="flex justify-center gap-1.5 mt-2">
+                    <div class="flex justify-center gap-1.5 mt-2.5">
                         <button onclick="setSlide(0)" class="dot-slide w-2.5 h-2.5 rounded-full bg-emerald-600 transition-all"></button>
                         <button onclick="setSlide(1)" class="dot-slide w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"></button>
                         <button onclick="setSlide(2)" class="dot-slide w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"></button>
@@ -200,7 +200,7 @@
                 </div>
 
                 <!-- KETERANGAN SLIDE -->
-                <p id="keteranganSlide" class="text-[11px] text-emerald-200 italic mt-2 text-center flex items-center justify-center gap-1">
+                <p id="keteranganSlide" class="text-[11px] text-emerald-200 italic mt-2.5 text-center flex items-center justify-center gap-1">
                     <i class="fas fa-info-circle text-amber-400"></i> Papan informasi pelayanan resmi
                 </p>
 

@@ -39,68 +39,75 @@
         <p class="text-emerald-100 text-xs md:text-sm mt-2">Informasi jenis pelayanan, standar pelayanan, serta jadwal operasional di UPTD Puskesmas Haur Gading</p>
     </div>
 
-    <!-- KONTEN UTAMA -->
-    <main class="container mx-auto px-4 py-8 max-w-5xl space-y-8 flex-grow">
+    <!-- Konten Utama Halaman Layanan & Jadwal -->
+<section class="py-10 bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 max-w-5xl space-y-8">
+        
+        <!-- Judul Halaman -->
+        <div class="text-center space-y-2">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase px-3 py-1 rounded-full">
+                <i class="fas fa-info-circle"></i> Informasi Resmi
+            </span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Jenis & Jadwal Pelayanan Puskesmas</h2>
+            <p class="text-xs md:text-sm text-gray-600 max-w-xl mx-auto">
+                Berikut adalah poster resmi standar pelayanan serta penetapan jam kerja UPTD Puskesmas Haur Gading.
+            </p>
+        </div>
 
-        <!-- SECTION 1: JENIS & STANDAR PELAYANAN -->
-        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-            <h3 class="text-lg font-bold text-emerald-800 border-b pb-2 mb-4 flex items-center gap-2">
-                <i class="fas fa-stethoscope text-amber-500"></i> Jenis & Standar Pelayanan
-            </h3>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
-                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Pemeriksaan Umum (Poli Umum)</h4>
-                    <p class="text-xs text-gray-600">Pelayanan kesehatan dasar, pengobatan, konseling medis, dan rujukan pasien rawat jalan.</p>
+        <!-- Grid Poster Resmi (2 Kolom / Menyesuaikan Tampilan) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- Poster 1: Jenis Pelayanan & Waktu Pelayanan -->
+            <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center space-y-3">
+                <div class="w-full text-left px-2">
+                    <h3 class="font-bold text-sm text-gray-900 flex items-center gap-2">
+                        <i class="fas fa-file-medical text-emerald-600"></i> Poster Jenis & Waktu Pelayanan
+                    </h3>
+                    <p class="text-[11px] text-gray-500">Klik gambar untuk memperjelas poster</p>
                 </div>
-                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
-                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Kesehatan Ibu & Anak (KIA / KB)</h4>
-                    <p class="text-xs text-gray-600">Pemeriksaan kehamilan (ANC), pelayanan KB, imunisasi bayi, dan kesehatan reproduksi.</p>
-                </div>
-                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
-                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Pelayanan Gizi & Konseling</h4>
-                    <p class="text-xs text-gray-600">Konsultasi gizi, pemantauan status gizi anak balita, dan penanganan pencegahan stunting.</p>
-                </div>
-                <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
-                    <h4 class="font-bold text-emerald-900 text-sm mb-1">Posyandu Balita & Lansia</h4>
-                    <p class="text-xs text-gray-600">Kegiatan pelayanan kesehatan rutin berbasis masyarakat di seluruh desa wilayah kerja.</p>
+                
+                <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-inner group relative">
+                    <img src="assets/poster-pelayanan.jpg" 
+                         alt="Poster Jenis dan Waktu Pelayanan Puskesmas Haur Gading" 
+                         class="w-full h-auto object-contain max-h-[600px] mx-auto cursor-pointer group-hover:scale-102 transition duration-300"
+                         onclick="window.open(this.src, '_blank')"
+                         title="Klik untuk memperbesar poster">
                 </div>
             </div>
-        </section>
 
-        <!-- SECTION 2: JADWAL PELAYANAN -->
-        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-            <h3 class="text-lg font-bold text-emerald-800 border-b pb-2 mb-4 flex items-center gap-2">
-                <i class="fas fa-calendar-alt text-amber-500"></i> Jadwal Operasional Pelayanan
-            </h3>
-            <div class="overflow-x-auto">
-                <table class="w-full text-xs text-left text-gray-600 border-collapse">
-                    <thead>
-                        <tr class="bg-emerald-700 text-white">
-                            <th class="p-3 rounded-tl-lg">Hari</th>
-                            <th class="p-3">Jam Pendaftaran</th>
-                            <th class="p-3 rounded-tr-lg">Layanan Utama</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-3 font-semibold text-gray-800">Senin - Kamis</td>
-                            <td class="p-3">08.00 - 12.00 WITA</td>
-                            <td class="p-3">Poli Umum, KIA/KB, Gizi, Sanitasi, Farmasi</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-3 font-semibold text-gray-800">Jumat</td>
-                            <td class="p-3">08.00 - 10.30 WITA</td>
-                            <td class="p-3">Poli Umum, Konseling Kesehatan, Farmasi</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-3 font-semibold text-gray-800">Sabtu</td>
-                            <td class="p-3">08.00 - 11.30 WITA</td>
-                            <td class="p-3">Poli Umum, Imunisasi Rutin, Farmasi</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Poster 2: Keputusan Bupati / Jam Pelayanan 5 Hari Kerja -->
+            <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center space-y-3">
+                <div class="w-full text-left px-2">
+                    <h3 class="font-bold text-sm text-gray-900 flex items-center gap-2">
+                        <i class="fas fa-calendar-alt text-emerald-600"></i> SK Penetapan 5 Hari Kerja
+                    </h3>
+                    <p class="text-[11px] text-gray-500">Klik gambar untuk memperjelas poster</p>
+                </div>
+                
+                <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-inner group relative">
+                    <img src="assets/poster-jam-kerja.jpg" 
+                         alt="Poster Jam Pelayanan 5 Hari Kerja UPT Puskesmas Haur Gading" 
+                         class="w-full h-auto object-contain max-h-[600px] mx-auto cursor-pointer group-hover:scale-102 transition duration-300"
+                         onclick="window.open(this.src, '_blank')"
+                         title="Klik untuk memperbesar poster">
+                </div>
             </div>
-        </section>
+
+        </div>
+
+        <!-- Catatan / Informasi Tambahan Bawah -->
+        <div class="bg-emerald-900 text-white p-5 rounded-2xl shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="space-y-1 text-center sm:text-left">
+                <h4 class="font-bold text-sm text-amber-300">Butuh Informasi Pendaftaran Online?</h4>
+                <p class="text-xs text-emerald-100">Silakan akses menu alur pendaftaran atau hubungi layanan pengaduan kami.</p>
+            </div>
+            <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs px-5 py-2.5 rounded-xl transition shadow">
+                <i class="fas fa-mobile-alt mr-1"></i> Alur Pendaftaran
+            </a>
+        </div>
+
+    </div>
+</section>
 
         <!-- SECTION 3: RINGKASAN ALUR PELAYANAN -->
         <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">

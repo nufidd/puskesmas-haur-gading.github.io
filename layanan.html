@@ -11,17 +11,19 @@
 
     <!-- HEADER & NAVBAR -->
     <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="assets/logo-hsu.png" alt="Logo HSU" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.style.display='none'">
-                <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas" class="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.style.display='none'">
-                <div>
-                    <h1 class="font-bold text-base md:text-lg leading-tight uppercase tracking-wide">PUSKESMAS HAUR GADING</h1>
-                    <p class="text-xs text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-start">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/logo-hsu.png" alt="Logo HSU" class="w-9 h-9 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.style.display='none'">
+                    <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas" class="w-9 h-9 object-contain bg-white rounded-full p-1 shadow-sm" onerror="this.style.display='none'">
+                    <div>
+                        <h1 class="font-bold text-sm md:text-base leading-tight uppercase tracking-wide">PUSKESMAS HAUR GADING</h1>
+                        <p class="text-[10px] text-emerald-100">Kabupaten Hulu Sungai Utara</p>
+                    </div>
                 </div>
             </div>
 
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            <nav class="flex flex-wrap justify-center gap-4 text-xs md:text-sm font-medium">
                 <a href="index.html" class="hover:text-amber-200 transition">Beranda</a>
                 <a href="profil.html" class="hover:text-amber-200 transition">Profil</a>
                 <a href="layanan.html" class="text-amber-300 font-bold underline">Layanan</a>
@@ -34,84 +36,84 @@
     </header>
 
     <!-- BANNER HALAMAN -->
-    <div class="bg-emerald-800 text-white py-10 px-4 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold">Layanan Kesehatan Kami</h2>
-        <p class="text-emerald-100 text-xs md:text-sm mt-2">Informasi jenis pelayanan, standar pelayanan, serta jadwal operasional di UPTD Puskesmas Haur Gading</p>
+    <div class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-xl md:text-2xl font-bold">Layanan Kesehatan Kami</h2>
+        <p class="text-emerald-100 text-xs mt-1">Informasi jenis pelayanan, standar pelayanan, serta jadwal operasional di UPTD Puskesmas Haur Gading</p>
     </div>
 
-    <!-- Konten Utama Halaman Layanan & Jadwal -->
-<section class="py-10 bg-gray-50 min-h-screen">
-    <div class="container mx-auto px-4 max-w-5xl space-y-8">
-        
-        <!-- Judul Halaman -->
-        <div class="text-center space-y-2">
-            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase px-3 py-1 rounded-full">
-                <i class="fas fa-info-circle"></i> Informasi Resmi
-            </span>
-            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Jenis & Jadwal Pelayanan Puskesmas</h2>
-            <p class="text-xs md:text-sm text-gray-600 max-w-xl mx-auto">
-                Berikut adalah poster resmi standar pelayanan serta penetapan jam kerja UPTD Puskesmas Haur Gading.
-            </p>
-        </div>
-
-        <!-- Grid Poster Resmi (2 Kolom / Menyesuaikan Tampilan) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-            
-            <!-- Poster 1: Jenis Pelayanan & Waktu Pelayanan -->
-            <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center space-y-3">
-                <div class="w-full text-left px-2">
-                    <h3 class="font-bold text-sm text-gray-900 flex items-center gap-2">
-                        <i class="fas fa-file-medical text-emerald-600"></i> Poster Jenis & Waktu Pelayanan
-                    </h3>
-                    <p class="text-[11px] text-gray-500">Klik gambar untuk memperjelas poster</p>
-                </div>
+    <!-- KONTEN UTAMA: POSTER RESMI LAYANAN & JADWAL (POSISI DI ATAS) -->
+    <main class="flex-grow">
+        <section class="py-10 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-5xl space-y-8">
                 
-                <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-inner group relative">
-                    <img src="assets/papan-pelayanan.jpg" 
-                         alt="Poster Jenis dan Waktu Pelayanan Puskesmas Haur Gading" 
-                         class="w-full h-auto object-contain max-h-[600px] mx-auto cursor-pointer group-hover:scale-102 transition duration-300"
-                         onclick="window.open(this.src, '_blank')"
-                         title="Klik untuk memperbesar poster">
+                <!-- Judul Halaman -->
+                <div class="text-center space-y-2">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase px-3 py-1 rounded-full">
+                        <i class="fas fa-info-circle"></i> Informasi Resmi
+                    </span>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-gray-900">Jenis & Jadwal Pelayanan Puskesmas</h2>
+                    <p class="text-xs text-gray-600 max-w-xl mx-auto">
+                        Berikut adalah poster resmi standar pelayanan serta penetapan jam kerja UPTD Puskesmas Haur Gading.
+                    </p>
                 </div>
-            </div>
 
-            <!-- Poster 2: Keputusan Bupati / Jam Pelayanan 5 Hari Kerja -->
-            <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center space-y-3">
-                <div class="w-full text-left px-2">
-                    <h3 class="font-bold text-sm text-gray-900 flex items-center gap-2">
-                        <i class="fas fa-calendar-alt text-emerald-600"></i> SK Penetapan 5 Hari Kerja
-                    </h3>
-                    <p class="text-[11px] text-gray-500">Klik gambar untuk memperjelas poster</p>
+                <!-- Grid Poster Resmi (2 Kolom) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    
+                    <!-- Poster 1: Jenis Pelayanan & Waktu Pelayanan -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center space-y-3">
+                        <div class="w-full text-left px-2">
+                            <h3 class="font-bold text-xs md:text-sm text-gray-900 flex items-center gap-2">
+                                <i class="fas fa-file-medical text-emerald-600"></i> Poster Jenis & Waktu Pelayanan
+                            </h3>
+                            <p class="text-[10px] text-gray-500">Klik gambar untuk memperjelas poster</p>
+                        </div>
+                        
+                        <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-inner group relative">
+                            <img src="assets/poster-pelayanan.jpg" 
+                                 alt="Poster Jenis dan Waktu Pelayanan Puskesmas Haur Gading" 
+                                 class="w-full h-auto object-contain max-h-[600px] mx-auto cursor-pointer group-hover:scale-102 transition duration-300"
+                                 onclick="window.open(this.src, '_blank')"
+                                 title="Klik untuk memperbesar poster">
+                        </div>
+                    </div>
+
+                    <!-- Poster 2: Keputusan Bupati / Jam Pelayanan 5 Hari Kerja -->
+                    <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center space-y-3">
+                        <div class="w-full text-left px-2">
+                            <h3 class="font-bold text-xs md:text-sm text-gray-900 flex items-center gap-2">
+                                <i class="fas fa-calendar-alt text-emerald-600"></i> SK Penetapan 5 Hari Kerja
+                            </h3>
+                            <p class="text-[10px] text-gray-500">Klik gambar untuk memperjelas poster</p>
+                        </div>
+                        
+                        <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-inner group relative">
+                            <img src="assets/poster-jam-kerja.jpg" 
+                                 alt="Poster Jam Pelayanan 5 Hari Kerja UPT Puskesmas Haur Gading" 
+                                 class="w-full h-auto object-contain max-h-[600px] mx-auto cursor-pointer group-hover:scale-102 transition duration-300"
+                                 onclick="window.open(this.src, '_blank')"
+                                 title="Klik untuk memperbesar poster">
+                        </div>
+                    </div>
+
                 </div>
-                
-                <div class="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-inner group relative">
-                    <img src="assets/poster-jam-kerja.jpg" 
-                         alt="Poster Jam Pelayanan 5 Hari Kerja UPT Puskesmas Haur Gading" 
-                         class="w-full h-auto object-contain max-h-[600px] mx-auto cursor-pointer group-hover:scale-102 transition duration-300"
-                         onclick="window.open(this.src, '_blank')"
-                         title="Klik untuk memperbesar poster">
+
+                <!-- Catatan / Informasi Tambahan Bawah -->
+                <div class="bg-emerald-900 text-white p-5 rounded-2xl shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="space-y-1 text-center sm:text-left">
+                        <h4 class="font-bold text-xs md:text-sm text-amber-300">Butuh Informasi Pendaftaran Online?</h4>
+                        <p class="text-xs text-emerald-100">Silakan akses menu alur pendaftaran atau hubungi layanan pengaduan kami.</p>
+                    </div>
+                    <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs px-5 py-2.5 rounded-xl transition shadow shrink-0">
+                        <i class="fas fa-mobile-alt mr-1"></i> Alur Pendaftaran
+                    </a>
                 </div>
+
             </div>
+        </section>
 
-        </div>
-
-        <!-- Catatan / Informasi Tambahan Bawah -->
-        <div class="bg-emerald-900 text-white p-5 rounded-2xl shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="space-y-1 text-center sm:text-left">
-                <h4 class="font-bold text-sm text-amber-300">Butuh Informasi Pendaftaran Online?</h4>
-                <p class="text-xs text-emerald-100">Silakan akses menu alur pendaftaran atau hubungi layanan pengaduan kami.</p>
-            </div>
-            <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs px-5 py-2.5 rounded-xl transition shadow">
-                <i class="fas fa-mobile-alt mr-1"></i> Alur Pendaftaran
-            </a>
-        </div>
-
-    </div>
-</section>
-</main>
-
-<!-- KALKULATOR KESEHATAN INTERAKTIF -->
-        <section id="kalkulator-kesehatan" class="py-10 bg-emerald-50/60 border-y border-emerald-100 my-8">
+        <!-- KALKULATOR KESEHATAN INTERAKTIF (POSISI DI BAWAH POSTER) -->
+        <section id="kalkulator-kesehatan" class="py-10 bg-emerald-50/60 border-y border-emerald-100">
             <div class="container mx-auto px-4 max-w-5xl">
                 
                 <div class="text-center mb-8">

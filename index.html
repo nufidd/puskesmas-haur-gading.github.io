@@ -409,49 +409,62 @@
                 </div>
             </div>
 
-            <!-- Kolom 3: Jam Operasional & Layanan Cepat -->
-            <div class="space-y-4">
-                
-                <!-- Card Jam Operasional -->
-                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-                    <h4 class="font-bold text-sm text-emerald-900 mb-3 flex items-center gap-2">
-                        <i class="fas fa-clock text-amber-500"></i> Jam Operasional
-                    </h4>
-                    <ul class="text-xs text-gray-600 space-y-2">
-                        <li class="flex justify-between border-b pb-1.5">
-                            <span>Senin – Kamis:</span>
-                            <span class="font-semibold text-emerald-800">08.00 – 12.00 WITA</span>
-                        </li>
-                        <li class="flex justify-between border-b pb-1.5">
-                            <span>Jumat:</span>
-                            <span class="font-semibold text-emerald-800">08.00 – 10.30 WITA</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Sabtu:</span>
-                            <span class="font-semibold text-emerald-800">08.00 – 11.30 WITA</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Card Akses Cepat & Aduan -->
-                <div class="bg-emerald-800 text-white p-5 rounded-2xl shadow-sm relative overflow-hidden">
-                    <h4 class="font-bold text-sm text-amber-300 mb-1">Layanan Informasi & Aduan</h4>
-                    <p class="text-xs text-emerald-100 mb-4">Butuh panduan pendaftaran atau ingin menyampaikan saran?</p>
-                    
-                    <div class="flex flex-col gap-2">
-                        <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs py-2.5 px-3 rounded-lg text-center transition flex items-center justify-center gap-2">
-                            <i class="fas fa-id-card"></i> Alur Pendaftaran Online
-                        </a>
-                        <a href="pengaduan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs py-2.5 px-3 rounded-lg text-center border border-emerald-500 transition flex items-center justify-center gap-2">
-                            <i class="fab fa-whatsapp"></i> Layanan Pengaduan
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
+<!-- KARTU POSTER INFORMASI & LAYANAN PENGADUAN (PENGGANTI JAM OPERASIONAL LAMA) -->
+<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-5">
+    
+    <!-- Header Poster Aduan -->
+    <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+        <!-- Logo Puskesmas Kecil / Ikon Instansi -->
+        <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200">
+            <i class="fas fa-headset text-emerald-700 text-lg"></i>
+        </div>
+        <div>
+            <h4 class="font-bold text-sm text-gray-900">Layanan Informasi & Aduan</h4>
+            <p class="text-[11px] text-gray-500">UPTD Puskesmas Haur Gading</p>
         </div>
     </div>
+
+    <!-- Konten Poster (Desain Kartu Aduan) -->
+    <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-4 rounded-xl relative overflow-hidden shadow-inner flex flex-col sm:flex-row items-center gap-4">
+        
+        <!-- Info Teks Aduan -->
+        <div class="space-y-2 flex-grow text-center sm:text-left">
+            <span class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
+                <i class="fas fa-bullhorn"></i> Respon Cepat
+            </span>
+            <p class="text-xs text-emerald-100 leading-relaxed">
+                Punya kritik, saran, atau kendala pelayanan? Sampaikan langsung kepada tim layanan pengaduan kami secara online.
+            </p>
+            <div class="text-[10px] text-amber-300 font-semibold flex items-center justify-center sm:justify-start gap-1 pt-1">
+                <i class="fas fa-shield-alt"></i> Kerahasiaan pelapor terjamin
+            </div>
+        </div>
+
+        <!-- Bagian Scan Barcode QR Code -->
+        <div class="bg-white p-2 rounded-xl shadow-md shrink-0 flex flex-col items-center justify-center border border-emerald-500/30">
+            <!-- Ganti src dengan link QR Code atau gambar barcode aduan Anda di folder assets/ -->
+            <img src="assets/barcode-pengaduan.png" 
+                 alt="Scan Barcode Pengaduan Puskesmas" 
+                 class="w-20 h-20 object-contain rounded-lg cursor-pointer"
+                 onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nufidd.github.io/puskesmas-haurgading.github.io/pengaduan.html'"
+                 onclick="window.open(this.src, '_blank')"
+                 title="Klik untuk memperbesar QR Code">
+            <span class="text-[9px] font-bold text-emerald-900 mt-1 uppercase tracking-tighter">Scan Barcode</span>
+        </div>
+
+    </div>
+
+    <!-- Tombol Aksi Cepat Aduan -->
+    <div class="grid grid-cols-2 gap-3 pt-1">
+        <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs p-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
+            <i class="fas fa-mobile-alt"></i> Antrean Online
+        </a>
+        <a href="pengaduan.html" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs p-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
+            <i class="fas fa-comments"></i> Layanan Aduan
+        </a>
+    </div>
+
+</div>
 </section>
 
     <!-- 6. FOOTER / KONTAK -->

@@ -375,39 +375,65 @@
     </div>
 </section>
 
-<!-- LOKASI PUSKESMAS & AKSES CEPAT LAYANAN -->
-<section class="py-12 bg-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            
-            <!-- Kolom 1 & 2: Peta Google Maps Akurat -->
-            <div class="lg:col-span-2 bg-emerald-50/50 p-5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-emerald-900 flex items-center gap-2">
-                            <i class="fas fa-map-marked-alt text-amber-500"></i> Lokasi Puskesmas
-                        </h3>
-                        <p class="text-xs text-gray-600 mt-0.5">
-                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>
-                            Jl. KH. M. Janawi RT. IV, Desa Palimbang Sari, Kec. Haur Gading, Kab. Hulu Sungai Utara
-                        </p>
-                    </div>
-                    <a href="https://maps.app.goo.gl/ctRMpsthesoEcJTN7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs px-3.5 py-2 rounded-xl transition shadow-sm shrink-0">
-                        <i class="fas fa-directions"></i> Buka Peta
-                    </a>
-                </div>
+<!-- KARTU LOKASI PUSKESMAS & FOTO GEDUNG -->
+<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-4">
+    
+    <!-- Header Lokasi -->
+    <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200">
+                <i class="fas fa-map-marker-alt text-emerald-700 text-lg"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm text-gray-900">Lokasi Puskesmas</h4>
+                <p class="text-[11px] text-gray-500">Jl. KH. M. Janawi RT. IV, Desa Palimbang Sari</p>
+            </div>
+        </div>
+        <a href="https://maps.google.com" target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg transition shadow-sm flex items-center gap-1">
+            <i class="fas fa-external-link-alt"></i> Buka Peta
+        </a>
+    </div>
 
-                <!-- Frame Google Maps Presisi -->
-                <div class="w-full h-72 rounded-xl overflow-hidden shadow-inner border border-gray-200">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.3813636737525!2d115.22858087588145!3d-2.408018697570881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df02e1c5132512f%3A0xc4eb0498b0ddf5ff!2sPuskesmas%20Haur%20Gading!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-                        class="w-full h-full border-0" 
+    <!-- Konten Utama: Foto Gedung & Google Maps Diperkecil -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+        
+        <!-- Foto Gedung Puskesmas (Sisi Kiri) -->
+        <div class="space-y-1.5">
+            <div class="w-full h-[150px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
+                <img src="assets/gedung-puskesmas.jpg" 
+                     alt="Gedung UPTD Puskesmas Haur Gading" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer"
+                     onclick="window.open(this.src, '_blank')"
+                     title="Klik untuk memperbesar foto gedung">
+            </div>
+            <p class="text-[10px] text-gray-500 text-center italic">Gedung UPTD Puskesmas Haur Gading</p>
+        </div>
+
+        <!-- Google Maps Diperkecil (Sisi Kanan) -->
+        <div class="space-y-1.5">
+            <div class="w-full h-[150px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                <!-- Iframe Google Maps dengan tinggi diperkecil -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8!2d115.1!3d-2.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMjQnMDAuMCJTIDExNcKwMDYnMDAuMCJF!5e0!3m2!1sid!2sid!4v1600000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+                </iframe>
             </div>
+            <p class="text-[10px] text-gray-500 text-center italic">Titik Lokasi Wilayah Kerja</p>
+        </div>
+
+    </div>
+
+    <!-- Alamat Lengkap Teks -->
+    <div class="bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100 text-xs text-gray-700 flex items-center gap-2">
+        <i class="fas fa-info-circle text-emerald-600 shrink-0"></i>
+        <span>Kec. Haur Gading, Kab. Hulu Sungai Utara, Kalimantan Selatan</span>
+    </div>
+
+</div>
 
 <!-- KARTU POSTER INFORMASI & LAYANAN PENGADUAN (DENGAN LOGO & BARCODE) -->
 <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-5">

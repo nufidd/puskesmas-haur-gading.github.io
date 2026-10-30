@@ -333,7 +333,7 @@
     </div>
 </section>
 
-<!-- SECTION: LOKASI PUSKESMAS & LAYANAN INFORMASI/ADUAN BERDAMINGAN -->
+<!-- SECTION: LOKASI PUSKESMAS & LAYANAN INFORMASI/ADUAN BERDAMPINGAN -->
 <section class="py-8 bg-gray-50">
     <div class="container mx-auto px-4 max-w-6xl">
         
@@ -399,58 +399,56 @@
             </div>
 
 
-            <!-- 2. KOTAK KANAN: LAYANAN INFORMASI & ADUAN (BERBANDING SEJAJAR) -->
+            <!-- 2. KOTAK KANAN: LAYANAN INFORMASI & ADUAN (BARCODE & TEKS DIPERBESAR) -->
             <div class="bg-white p-5 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-4">
                 
                 <!-- Header Poster Aduan -->
                 <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
-                    <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200 p-1">
+                    <div class="w-11 h-11 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200 p-1">
                         <img src="assets/logo-puskesmas.png" 
                              alt="Logo Puskesmas Haur Gading" 
                              class="w-full h-full object-contain"
                              onerror="this.src='https://via.placeholder.com/40?text=Logo'">
                     </div>
                     <div>
-                        <h4 class="font-bold text-xs md:text-sm text-gray-900">Layanan Informasi & Aduan</h4>
-                        <p class="text-[10px] text-gray-500">UPTD Puskesmas Haur Gading</p>
+                        <h4 class="font-bold text-sm md:text-base text-gray-900">Layanan Informasi & Aduan</h4>
+                        <p class="text-xs text-gray-500">UPTD Puskesmas Haur Gading</p>
                     </div>
                 </div>
 
-                <!-- Konten Banner Aduan & Barcode -->
-                <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-3.5 rounded-xl relative overflow-hidden shadow-inner flex items-center gap-3">
+                <!-- Konten Banner Aduan & Barcode Diperbesar -->
+                <div class="bg-gradient-to-br from-emerald-900 via-emerald-900 to-emerald-950 text-white p-4 rounded-2xl relative overflow-hidden shadow-inner flex items-center justify-between gap-4">
                     
-                    <div class="space-y-1.5 flex-grow">
-                        <span class="bg-amber-400 text-emerald-950 text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full inline-block">
+                    <!-- Info Teks Aduan (Diperbesar) -->
+                    <div class="space-y-2 flex-grow">
+                        <span class="bg-amber-400 text-emerald-950 text-[10px] md:text-xs font-black uppercase px-2.5 py-1 rounded-full inline-flex items-center gap-1 shadow-sm">
                             <i class="fas fa-bullhorn"></i> Respon Cepat
                         </span>
-                        <p class="text-[11px] text-emerald-100 leading-tight">
-                            Punya kritik, saran, atau kendala pelayanan? Sampaikan secara online.
+                        <p class="text-xs md:text-sm text-emerald-100 leading-relaxed font-medium">
+                            Punya kritik, saran, atau kendala pelayanan? Sampaikan langsung secara online.
                         </p>
-                        <div class="text-[9px] text-amber-300 font-semibold flex items-center gap-1">
-                            <i class="fas fa-shield-alt"></i> Kerahasiaan pelapor terjamin
+                        <div class="text-[10px] md:text-xs text-amber-300 font-semibold flex items-center gap-1.5 pt-1">
+                            <i class="fas fa-shield-alt text-amber-400"></i> Kerahasiaan pelapor terjamin
                         </div>
                     </div>
 
-                    <!-- Barcode -->
-                    <div class="bg-white p-1.5 rounded-xl shadow-md shrink-0 flex flex-col items-center justify-center border border-emerald-500/30">
+                    <!-- Scan Barcode Diperbesar -->
+                    <div class="bg-white p-2 rounded-2xl shadow-lg shrink-0 flex flex-col items-center justify-center border-2 border-emerald-400/40">
                         <img src="assets/barcode-pengaduan.png" 
                              alt="Scan Barcode Pengaduan" 
-                             class="w-16 h-16 object-contain rounded-lg cursor-pointer"
-                             onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nufidd.github.io/puskesmas-haurgading.github.io/pengaduan.html'"
+                             class="w-24 h-24 md:w-28 md:h-28 object-contain rounded-xl cursor-pointer hover:scale-105 transition transform"
+                             onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nufidd.github.io/puskesmas-haurgading.github.io/pengaduan.html'"
                              onclick="window.open(this.src, '_blank')"
                              title="Klik untuk memperbesar QR Code">
-                        <span class="text-[8px] font-bold text-emerald-900 mt-0.5 uppercase tracking-tighter">Scan Barcode</span>
+                        <span class="text-[9px] md:text-[10px] font-black text-emerald-950 mt-1 uppercase tracking-wider">Scan Barcode</span>
                     </div>
 
                 </div>
 
-                <!-- Tombol Aksi Cepat -->
-                <div class="grid grid-cols-2 gap-2.5 pt-0.5">
-                    <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-[11px] py-2.5 px-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
-                        <i class="fas fa-mobile-alt"></i> Antrean Online
-                    </a>
-                    <a href="pengaduan.html" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-[11px] py-2.5 px-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
-                        <i class="fas fa-comments"></i> Layanan Aduan
+                <!-- Tombol Tunggal Layanan Aduan (Full Width) -->
+                <div class="pt-1">
+                    <a href="pengaduan.html" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs md:text-sm py-3 px-4 rounded-xl transition text-center shadow-md flex items-center justify-center gap-2">
+                        <i class="fas fa-comments text-amber-400"></i> Buka Formulir Layanan Aduan
                     </a>
                 </div>
 
@@ -483,7 +481,7 @@
             </div>
         </div>
         <div class="text-center text-xs text-emerald-400 mt-6 pt-4 border-t border-emerald-800">
-            &copy; 2026 UPTD Puskesmas Haur Gading. All Rights Reserved.
+            &copy; 2026 Puskesmas Haur Gading. All Rights Reserved.
         </div>
     </footer>
 

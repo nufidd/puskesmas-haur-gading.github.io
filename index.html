@@ -76,13 +76,21 @@
         </div>
     </div>
 
-<!-- HERO COMPACT & CAROUSEL SLIDE FOTO (BERANDA - VERSI PROPORSIONAL) -->
-<section class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-950 text-white py-10 border-b border-emerald-700/50">
-    <div class="container mx-auto px-4 max-w-6xl">
+<!-- HERO COMPACT & CAROUSEL SLIDE FOTO (DENGAN BACKGROUND GEDUNG PUSKESMAS) -->
+<section class="relative text-white py-10 border-b border-emerald-700/50 overflow-hidden">
+    
+    <!-- BACKGROUND IMAGE GEDUNG PUSKESMAS & OVERLAY GELAP -->
+    <div class="absolute inset-0 z-0">
+        <img src="assets/gedung-puskesmas.jpg" alt="Gedung UPTD Puskesmas Haur Gading" class="w-full h-full object-cover object-center">
+        <!-- Lapisan gradasi gelap transparan agar teks sangat kontras -->
+        <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/95 via-emerald-900/90 to-emerald-950/85 backdrop-blur-[2px]"></div>
+    </div>
+
+    <div class="container mx-auto px-4 max-w-6xl relative z-10">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <!-- SISI KIRI: HERO RINGKAS & WAKTU PELAYANAN (7 Kolom - Dibuat Lebih Berisi & Padat) -->
+            <!-- SISI KIRI: HERO RINGKAS & WAKTU PELAYANAN (7 Kolom) -->
             <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
                 
                 <!-- Hero Compact Text -->
@@ -90,16 +98,16 @@
                     <span class="inline-flex items-center gap-1.5 bg-amber-400 text-emerald-950 text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow-sm">
                         <i class="fas fa-hospital"></i> Selamat Datang
                     </span>
-                    <h2 class="text-2xl md:text-4xl font-extrabold leading-tight tracking-tight">
+                    <h2 class="text-2xl md:text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-sm">
                         PUSAT KESEHATAN MASYARAKAT KECAMATAN HAUR GADING KABUPATEN HULU SUNGAI UTARA
                     </h2>
-                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed">
+                    <p class="text-sm md:text-base text-emerald-100 leading-relaxed font-medium">
                         Puskesmas Haur Gading siap memberikan pelayanan kesehatan berkualitas, ramah, dan profesional bagi seluruh masyarakat Kecamatan Haur Gading.
                     </p>
                 </div>
 
                 <!-- SUB-HEADER: WAKTU & JADWAL OPERASIONAL -->
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15 space-y-4 shadow-lg">
+                <div class="bg-emerald-950/70 backdrop-blur-md p-5 rounded-2xl border border-emerald-500/30 space-y-4 shadow-xl">
                     <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
                         <h4 class="font-bold text-sm md:text-base text-amber-300 flex items-center gap-2">
                             <i class="far fa-clock text-amber-400 text-base"></i> Jam Operasional & Pelayanan
@@ -111,15 +119,15 @@
 
                     <!-- Grid Waktu -->
                     <div class="grid grid-cols-2 gap-3.5 text-xs md:text-sm">
-                        <div class="bg-emerald-950/60 p-3 rounded-xl border border-emerald-500/20">
+                        <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-500/30">
                             <p class="text-emerald-200 text-xs">Senin s/d Kamis</p>
                             <p class="font-bold text-white text-sm md:text-base mt-0.5">08.00 - 13.00 WITA</p>
                         </div>
-                        <div class="bg-emerald-950/60 p-3 rounded-xl border border-emerald-500/20">
+                        <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-500/30">
                             <p class="text-emerald-200 text-xs">Jum'at</p>
                             <p class="font-bold text-white text-sm md:text-base mt-0.5">08.00 - 10.00 WITA</p>
                         </div>
-                            <div class="bg-emerald-950/60 p-3 rounded-xl border border-emerald-500/20">
+                        <div class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-500/30 col-span-2">
                             <p class="text-emerald-200 text-xs">Sabtu Pelayanan Kegawatdaruratan</p>
                             <p class="font-bold text-white text-sm md:text-base mt-0.5">08.00 - 14.00 WITA</p>
                         </div>
@@ -141,19 +149,19 @@
                     <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs md:text-sm px-5 py-3 rounded-xl transition shadow-md flex items-center gap-2">
                         <i class="fas fa-mobile-alt"></i> Panduan Antrean Online
                     </a>
-                    <a href="layanan.html" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs md:text-sm px-5 py-3 rounded-xl transition border border-emerald-500/30 flex items-center gap-2">
+                    <a href="layanan.html" class="bg-emerald-700/80 hover:bg-emerald-700 text-white font-bold text-xs md:text-sm px-5 py-3 rounded-xl transition border border-emerald-500/40 flex items-center gap-2 backdrop-blur-sm">
                         <i class="fas fa-notes-medical"></i> Lihat Semua Layanan
                     </a>
                 </div>
 
             </div>
 
-<!-- SISI KANAN: CAROUSEL SLIDE GAMBAR (DITINGKATKAN AGAR SEJAJAR DENGAN TEKS KIRI) -->
+            <!-- SISI KANAN: CAROUSEL SLIDE GAMBAR (5 Kolom - Sejajar & Proporsional) -->
             <div class="lg:col-span-5 flex flex-col items-center justify-center">
                 
-                <div class="bg-white p-3 rounded-2xl shadow-xl border border-emerald-600/40 overflow-hidden relative group w-full max-w-[340px] mx-auto">
+                <div class="bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-2xl border border-white/25 overflow-hidden relative group w-full max-w-[340px] mx-auto">
                     
-                    <!-- CONTAINER GAMBAR SLIDE (Tinggi ditingkatkan menjadi h-[460px]) -->
+                    <!-- CONTAINER GAMBAR SLIDE -->
                     <div class="relative w-full h-[460px] overflow-hidden rounded-xl flex items-center justify-center bg-gray-50">
                         
                         <!-- Slide 1: Papan Pelayanan -->
@@ -183,10 +191,10 @@
                     </div>
 
                     <!-- TOMBOL NAVIGASI KIRI & KANAN -->
-                    <button onclick="pindahSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md z-10">
+                    <button onclick="pindahSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md z-10">
                         <i class="fas fa-chevron-left text-xs"></i>
                     </button>
-                    <button onclick="pindahSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md z-10">
+                    <button onclick="pindahSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-emerald-700 text-white w-8 h-8 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-md z-10">
                         <i class="fas fa-chevron-right text-xs"></i>
                     </button>
 
@@ -200,7 +208,7 @@
                 </div>
 
                 <!-- KETERANGAN SLIDE -->
-                <p id="keteranganSlide" class="text-[11px] text-emerald-200 italic mt-2.5 text-center flex items-center justify-center gap-1">
+                <p id="keteranganSlide" class="text-[11px] text-emerald-100 italic mt-2.5 text-center flex items-center justify-center gap-1 drop-shadow-md">
                     <i class="fas fa-info-circle text-amber-400"></i> Papan informasi pelayanan resmi
                 </p>
 

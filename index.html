@@ -409,14 +409,17 @@
                 </div>
             </div>
 
-<!-- KARTU POSTER INFORMASI & LAYANAN PENGADUAN (PENGGANTI JAM OPERASIONAL LAMA) -->
+<!-- KARTU POSTER INFORMASI & LAYANAN PENGADUAN (DENGAN LOGO & BARCODE) -->
 <div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-5">
     
-    <!-- Header Poster Aduan -->
+    <!-- Header Poster Aduan (Logo Puskesmas & Judul) -->
     <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
-        <!-- Logo Puskesmas Kecil / Ikon Instansi -->
-        <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200">
-            <i class="fas fa-headset text-emerald-700 text-lg"></i>
+        <!-- Logo Resmi Puskesmas -->
+        <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200 p-1">
+            <img src="assets/logo-puskesmas.png" 
+                 alt="Logo Puskesmas Haur Gading" 
+                 class="w-full h-full object-contain"
+                 onerror="this.src='https://via.placeholder.com/40?text=Logo'">
         </div>
         <div>
             <h4 class="font-bold text-sm text-gray-900">Layanan Informasi & Aduan</h4>
@@ -442,7 +445,6 @@
 
         <!-- Bagian Scan Barcode QR Code -->
         <div class="bg-white p-2 rounded-xl shadow-md shrink-0 flex flex-col items-center justify-center border border-emerald-500/30">
-            <!-- Ganti src dengan link QR Code atau gambar barcode aduan Anda di folder assets/ -->
             <img src="assets/barcode-pengaduan.png" 
                  alt="Scan Barcode Pengaduan Puskesmas" 
                  class="w-20 h-20 object-contain rounded-lg cursor-pointer"

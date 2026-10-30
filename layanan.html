@@ -110,232 +110,175 @@
 </section>
 </main>
 
-<!-- KALKULATOR KESEHATAN INTERAKTIF (LAYANAN.HTML) -->
-<section id="kalkulator-kesehatan" class="py-10 bg-emerald-50/60 border-y border-emerald-100 my-8">
-    <div class="container mx-auto px-4 max-w-5xl">
-        
-        <!-- Header Section -->
-        <div class="text-center mb-8">
-            <span class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-                Fitur Mandiri
-            </span>
-            <h3 class="text-xl md:text-2xl font-bold text-emerald-900 mt-2">Kalkulator Kesehatan</h3>
-            <p class="text-xs text-gray-600 mt-1 max-w-xl mx-auto">
-                Cek status gizi ideal tubuh Anda.
-            </p>
-        </div>
-
-        <!-- Card Grid (BMI) -->
-        <div class="grid md:grid-cols-2 gap-6">
-            
-            <!-- 1. KALKULATOR BMI -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-100 flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-2 mb-4 border-b border-gray-100 pb-3">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">
-                            <i class="fas fa-weight"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-sm text-emerald-900">Kalkulator BMI (Berat Badan Ideal)</h4>
-                            <p class="text-[11px] text-gray-500">Hitung Indeks Massa Tubuh Anda</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-3 text-xs">
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-1">Berat Badan (kg)</label>
-                            <input type="number" id="bmiBerat" placeholder="Contoh: 60" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-1">Tinggi Badan (cm)</label>
-                            <input type="number" id="bmiTinggi" placeholder="Contoh: 165" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                        </div>
-                        <button onclick="hitungBMI()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2 rounded-xl transition shadow-sm">
-                            Hitung BMI
-                        </button>
-                    </div>
-                </div>
-
-                <div id="hasilBMI" class="hidden mt-4 p-3 rounded-xl bg-gray-50 border text-center text-xs">
-                    <p class="text-gray-500">Nilai BMI Anda: <span id="nilaiBMI" class="font-bold text-emerald-800 text-sm">--</span></p>
-                    <p id="kategoriBMI" class="font-bold text-sm mt-0.5">--</p>
-                </div>
-            </div>
-
-<!-- SKRINING RISIKO STUNTING MANDIRI (DENGAN INPUT BB/TB) -->
-<section id="skrining-stunting" class="py-10 bg-amber-50/50 border-b border-amber-100 my-8">
-    <div class="container mx-auto px-4 max-w-4xl">
-        
-        <!-- Header Section -->
-        <div class="text-center mb-6">
-            <span class="bg-amber-500 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-                Fitur Mandiri
-            </span>
-            <h3 class="text-xl md:text-2xl font-bold text-emerald-900 mt-2">Skrining Mandiri Risiko Stunting Balita</h3>
-            <p class="text-xs text-gray-600 mt-1 max-w-lg mx-auto">
-                Masukkan data fisik dan jawab kuesioner berikut untuk deteksi dini tumbuh kembang buah hati Anda (Usia 0 - 5 Tahun).
-            </p>
-        </div>
-
-        <!-- Form Kuesioner -->
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-200 space-y-5 text-xs">
-            
-            <!-- FORM INPUT DATA FISIK BALITA -->
-            <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200/60 space-y-3">
-                <h4 class="font-bold text-emerald-900 flex items-center gap-2 text-xs">
-                    <i class="fas fa-child text-amber-600"></i> Data Fisik Balita
-                </h4>
+<!-- KALKULATOR KESEHATAN INTERAKTIF -->
+        <section id="kalkulator-kesehatan" class="py-10 bg-emerald-50/60 border-y border-emerald-100 my-8">
+            <div class="container mx-auto px-4 max-w-5xl">
                 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-1">Usia Anak (Bulan)</label>
-                        <input type="number" id="stuntingUsia" placeholder="Contoh: 18" min="0" max="60" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white">
+                <div class="text-center mb-8">
+                    <span class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                        Fitur Mandiri
+                    </span>
+                    <h3 class="text-xl md:text-2xl font-bold text-emerald-900 mt-2">Kalkulator Kesehatan</h3>
+                    <p class="text-xs text-gray-600 mt-1 max-w-xl mx-auto">
+                        Cek status gizi ideal tubuh Anda.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- 1. KALKULATOR BMI -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-4 border-b border-gray-100 pb-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">
+                                    <i class="fas fa-weight"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-emerald-900">Kalkulator BMI (Berat Badan Ideal)</h4>
+                                    <p class="text-[11px] text-gray-500">Hitung Indeks Massa Tubuh Anda</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 text-xs">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-1">Berat Badan (kg)</label>
+                                    <input type="number" id="bmiBerat" placeholder="Contoh: 60" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-1">Tinggi Badan (cm)</label>
+                                    <input type="number" id="bmiTinggi" placeholder="Contoh: 165" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                </div>
+                                <button onclick="hitungBMI()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2 rounded-xl transition shadow-sm">
+                                    Hitung BMI
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="hasilBMI" class="hidden mt-4 p-3 rounded-xl bg-gray-50 border text-center text-xs">
+                            <p class="text-gray-500">Nilai BMI Anda: <span id="nilaiBMI" class="font-bold text-emerald-800 text-sm">--</span></p>
+                            <p id="kategoriBMI" class="font-bold text-sm mt-0.5">--</p>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-1">Berat Badan (kg)</label>
-                        <input type="number" step="0.1" id="stuntingBB" placeholder="Contoh: 10.5" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white">
+
+                    <!-- 2. SKRINING RISIKO STUNTING MANDIRI -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-amber-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-4 border-b border-gray-100 pb-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm">
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-emerald-900">Skrining Mandiri Stunting Balita</h4>
+                                    <p class="text-[11px] text-gray-500">Deteksi Dini Tumbuh Kembang</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 text-xs">
+                                <div class="grid grid-cols-3 gap-2">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-1">Usia (bln)</label>
+                                        <input type="number" id="stuntingUsia" placeholder="18" class="w-full px-2 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-1">BB (kg)</label>
+                                        <input type="number" step="0.1" id="stuntingBB" placeholder="10.5" class="w-full px-2 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-1">TB (cm)</label>
+                                        <input type="number" step="0.1" id="stuntingTB" placeholder="80" class="w-full px-2 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                    </div>
+                                </div>
+                                <button onclick="cekHasilStunting()" class="w-full bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold py-2 rounded-xl transition shadow-sm">
+                                    Cek Risiko Stunting
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="hasilStunting" class="hidden mt-4 p-3 rounded-xl border text-center text-xs space-y-1">
+                            <p id="ringkasanFisikStunting" class="text-gray-500 text-[10px] mb-1">--</p>
+                            <p id="judulHasilStunting" class="font-bold text-sm">--</p>
+                            <p id="pesanHasilStunting" class="text-gray-600 leading-relaxed text-[11px]">--</p>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-1">Tinggi/Panjang Badan (cm)</label>
-                        <input type="number" step="0.1" id="stuntingTB" placeholder="Contoh: 80" class="w-full px-3 py-2 border rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white">
-                    </div>
+
                 </div>
+
             </div>
+        </section>
+    </main>
 
-            <!-- INDIKATOR PERTANYAAN -->
-            <div class="space-y-3">
-                <p class="font-bold text-emerald-900 border-b pb-2">Pertanyaan Indikator Tambahan:</p>
+    <!-- SCRIPT LOGIKA PERHITUNGAN -->
+    <script>
+        function hitungBMI() {
+            const berat = parseFloat(document.getElementById('bmiBerat').value);
+            const tinggiCm = parseFloat(document.getElementById('bmiTinggi').value);
 
-                <!-- Pertanyaan 1 -->
-                <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
-                    <input type="checkbox" id="stuntingQ1" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
-                    <label for="stuntingQ1" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>1. Kenaikan Berat Badan:</strong> Apakah kenaikan berat badan anak sering tidak mencapai garis hijau (sering tersendat/turun) dalam 2-3 bulan berturut-turut di Buku KIA?
-                    </label>
-                </div>
+            if (!berat || !tinggiCm || tinggiCm <= 0 || berat <= 0) {
+                alert('Mohon masukkan berat dan tinggi badan yang valid!');
+                return;
+            }
 
-                <!-- Pertanyaan 2 -->
-                <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
-                    <input type="checkbox" id="stuntingQ2" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
-                    <label for="stuntingQ2" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>2. Riwayat Penyakit:</strong> Apakah anak sering mengalami panyakit infeksi berulang seperti diare, ISPA/batuk lama, atau demam tinggi?
-                    </label>
-                </div>
+            const tinggiM = tinggiCm / 100;
+            const bmi = (berat / (tinggiM * tinggiM)).toFixed(1);
 
-                <!-- Pertanyaan 3 -->
-                <div class="flex items-start gap-3 bg-gray-50 p-3 rounded-xl">
-                    <input type="checkbox" id="stuntingQ3" class="mt-0.5 w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500">
-                    <label for="stuntingQ3" class="text-gray-700 leading-snug cursor-pointer">
-                        <strong>3. Asupan Gizi/ASI:</strong> Apakah anak mengalami masalah makan (GTM/sulit makan) atau asupan Protein Hewani & ASI kurang optimal?
-                    </label>
-                </div>
-            </div>
+            const containerHasil = document.getElementById('hasilBMI');
+            const elementNilai = document.getElementById('nilaiBMI');
+            const elementKategori = document.getElementById('kategoriBMI');
 
-            <!-- Tombol Cek Hasil -->
-            <button onclick="cekHasilStunting()" class="w-full bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold py-2.5 rounded-xl transition shadow-md flex items-center justify-center gap-2">
-                <i class="fas fa-search"></i> Lihat Hasil Analisis Dini
-            </button>
+            elementNilai.innerText = bmi;
+            containerHasil.classList.remove('hidden');
 
-            <!-- Kotak Hasil -->
-            <div id="hasilStunting" class="hidden p-4 rounded-xl border text-center text-xs space-y-1">
-                <p id="ringkasanFisikStunting" class="text-gray-500 text-[11px] mb-1">--</p>
-                <p id="judulHasilStunting" class="font-bold text-sm">--</p>
-                <p id="pesanHasilStunting" class="text-gray-600 leading-relaxed">--</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-    
-<!-- SCRIPT LOGIKA PERHITUNGAN -->
-<script>
-    function hitungBMI() {
-        const berat = parseFloat(document.getElementById('bmiBerat').value);
-        const tinggiCm = parseFloat(document.getElementById('bmiTinggi').value);
-
-        if (!berat || !tinggiCm || tinggiCm <= 0 || berat <= 0) {
-            alert('Mohon masukkan berat dan tinggi badan yang valid!');
-            return;
+            if (bmi < 18.5) {
+                elementKategori.innerText = 'Kekurangan Berat Badan (Kurus)';
+                elementKategori.className = 'font-bold text-sm mt-0.5 text-blue-600';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                elementKategori.innerText = 'Berat Badan Normal (Ideal)';
+                elementKategori.className = 'font-bold text-sm mt-0.5 text-emerald-600';
+            } else if (bmi >= 25.0 && bmi <= 29.9) {
+                elementKategori.innerText = 'Kelebihan Berat Badan (Gemuk)';
+                elementKategori.className = 'font-bold text-sm mt-0.5 text-amber-600';
+            } else {
+                elementKategori.innerText = 'Obesitas';
+                elementKategori.className = 'font-bold text-sm mt-0.5 text-red-600';
+            }
         }
 
-        const tinggiM = tinggiCm / 100;
-        const bmi = (berat / (tinggiM * tinggiM)).toFixed(1);
+        function cekHasilStunting() {
+            const usia = parseInt(document.getElementById('stuntingUsia').value);
+            const bb = parseFloat(document.getElementById('stuntingBB').value);
+            const tb = parseFloat(document.getElementById('stuntingTB').value);
 
-        const containerHasil = document.getElementById('hasilBMI');
-        const elementNilai = document.getElementById('nilaiBMI');
-        const elementKategori = document.getElementById('kategoriBMI');
+            if (isNaN(usia) || isNaN(bb) || isNaN(tb) || usia < 0 || bb <= 0 || tb <= 0) {
+                alert('Mohon isi Usia, Berat Badan, dan Tinggi Badan anak dengan benar!');
+                return;
+            }
 
-        elementNilai.innerText = bmi;
-        containerHasil.classList.remove('hidden');
+            const estimasiTBNormalMin = 48 + (usia * 1.1);
+            let skorRisiko = 0;
 
-        if (bmi < 18.5) {
-            elementKategori.innerText = 'Kekurangan Berat Badan (Kurus)';
-            elementKategori.className = 'font-bold text-sm mt-0.5 text-blue-600';
-        } else if (bmi >= 18.5 && bmi <= 24.9) {
-            elementKategori.innerText = 'Berat Badan Normal (Ideal)';
-            elementKategori.className = 'font-bold text-sm mt-0.5 text-emerald-600';
-        } else if (bmi >= 25.0 && bmi <= 29.9) {
-            elementKategori.innerText = 'Kelebihan Berat Badan (Gemuk)';
-            elementKategori.className = 'font-bold text-sm mt-0.5 text-amber-600';
-        } else {
-            elementKategori.innerText = 'Obesitas';
-            elementKategori.className = 'font-bold text-sm mt-0.5 text-red-600';
+            if (tb < estimasiTBNormalMin) {
+                skorRisiko += 2;
+            }
+
+            const containerHasil = document.getElementById('hasilStunting');
+            const ringkasan = document.getElementById('ringkasanFisikStunting');
+            const judul = document.getElementById('judulHasilStunting');
+            const pesan = document.getElementById('pesanHasilStunting');
+
+            containerHasil.classList.remove('hidden');
+            ringkasan.innerText = `Data Input: Usia ${usia} Bln | BB ${bb} kg | TB ${tb} cm`;
+
+            if (skorRisiko === 0) {
+                containerHasil.className = 'mt-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs space-y-1';
+                judul.innerText = '✅ Pertumbuhan Sesuai (Risiko Rendah)';
+                pesan.innerText = 'Pertahankan pemberian gizi seimbang dan rutin menimbang di Posyandu.';
+            } else {
+                containerHasil.className = 'mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1';
+                judul.innerText = '⚠️ Perlu Evaluasi Gizi (Risiko Sedang/Tinggi)';
+                pesan.innerText = 'Disarankan konsultasi dengan Petugas Gizi / Bidan di UPTD Puskesmas Haur Gading.';
+            }
         }
-    }
-    
-<!-- SCRIPT LOGIKA SKRINING DENGAN PERHITUNGAN BB/TB -->    
-function cekHasilStunting() {
-        const usia = parseInt(document.getElementById('stuntingUsia').value);
-        const bb = parseFloat(document.getElementById('stuntingBB').value);
-        const tb = parseFloat(document.getElementById('stuntingTB').value);
+    </script>
 
-        if (isNaN(usia) || isNaN(bb) || isNaN(tb) || usia < 0 || bb <= 0 || tb <= 0) {
-            alert('Mohon isi Usia, Berat Badan, dan Tinggi Badan anak dengan benar!');
-            return;
-        }
-
-        const q1 = document.getElementById('stuntingQ1').checked;
-        const q2 = document.getElementById('stuntingQ2').checked;
-        const q3 = document.getElementById('stuntingQ3').checked;
-
-        let skorRisiko = 0;
-
-        // Analisis Sederhana Rasio Tinggi Terhadap Usia (Aproksimasi)
-        // Rata-rata TB lahir ~50cm, bertambah ~1.5-2cm/bulan pada tahun pertama
-        const estimasiTBNormalMin = 48 + (usia * 1.1); 
-
-        if (tb < estimasiTBNormalMin) {
-            skorRisiko += 2; // Risiko lebih tinggi jika TB di bawah estimasi rata-rata usia
-        }
-
-        if (q1) skorRisiko += 1;
-        if (q2) skorRisiko += 1;
-        if (q3) skorRisiko += 1;
-
-        const containerHasil = document.getElementById('hasilStunting');
-        const ringkasan = document.getElementById('ringkasanFisikStunting');
-        const judul = document.getElementById('judulHasilStunting');
-        const pesan = document.getElementById('pesanHasilStunting');
-
-        containerHasil.classList.remove('hidden');
-        ringkasan.innerText = `Data Input: Usia ${usia} Bulan | BB ${bb} kg | TB ${tb} cm`;
-
-        if (skorRisiko === 0) {
-            containerHasil.className = 'p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs space-y-1';
-            judul.innerText = '✅ Pertumbuhan Sesuai (Risiko Rendah)';
-            pesan.innerText = 'Pertahankan pemberian ASI/MPASI gizi seimbang kaya protein hewani, serta rutin menimbang di Posyandu setiap bulan.';
-        } else if (skorRisiko <= 2) {
-            containerHasil.className = 'p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1';
-            judul.innerText = '⚠️ Perlu Evaluasi Gizi (Risiko Sedang)';
-            pesan.innerText = 'Disarankan untuk berkonsultasi dengan Petugas Gizi / Bidan Posyandu di UPTD Puskesmas Haur Gading untuk konseling gizi dan pencatatan grafik KMS yang lebih akurat.';
-        } else {
-            containerHasil.className = 'p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 text-xs space-y-1';
-            judul.innerText = '🚨 Memerlukan Pemeriksaan Lanjutan (Risiko Tinggi)';
-            pesan.innerText = 'Sangat disarankan untuk segera membawa anak ke Poli KIA / Gizi UPTD Puskesmas Haur Gading untuk pemeriksaan plotting Kurva WHO secara menyeluruh oleh petugas medis.';
-        }
-    }
-</script>
     <!-- FOOTER -->
     <footer class="bg-emerald-900 text-emerald-100 text-xs py-6 text-center border-t border-emerald-800">
         <p>&copy; 2026 UPTD Puskesmas Haur Gading. Hak Cipta Dilindungi.</p>

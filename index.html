@@ -375,124 +375,132 @@
     </div>
 </section>
 
-<!-- KARTU LOKASI PUSKESMAS & FOTO GEDUNG -->
-<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-4">
-    
-    <!-- Header Lokasi -->
-    <div class="flex items-center justify-between border-b border-gray-100 pb-3">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200">
-                <i class="fas fa-map-marker-alt text-emerald-700 text-lg"></i>
-            </div>
-            <div>
-                <h4 class="font-bold text-sm text-gray-900">Lokasi Puskesmas</h4>
-                <p class="text-[11px] text-gray-500">Jl. KH. M. Janawi RT. IV, Desa Palimbang Sari</p>
-            </div>
-        </div>
-        <a href="https://maps.google.com" target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg transition shadow-sm flex items-center gap-1">
-            <i class="fas fa-external-link-alt"></i> Buka Peta
-        </a>
-    </div>
-
-    <!-- Konten Utama: Foto Gedung & Google Maps Diperkecil -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+<!-- SECTION: LOKASI PUSKESMAS & LAYANAN INFORMASI/ADUAN BERDAMINGAN -->
+<section class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
         
-        <!-- Foto Gedung Puskesmas (Sisi Kiri) -->
-        <div class="space-y-1.5">
-            <div class="w-full h-[150px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
-                <img src="assets/gedung-puskesmas.jpg" 
-                     alt="Gedung UPTD Puskesmas Haur Gading" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer"
-                     onclick="window.open(this.src, '_blank')"
-                     title="Klik untuk memperbesar foto gedung">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            
+            <!-- 1. KOTAK KIRI: LOKASI PUSKESMAS & FOTO GEDUNG (UKURAN RINGKAS) -->
+            <div class="bg-white p-5 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-4">
+                
+                <!-- Header Lokasi -->
+                <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200">
+                            <i class="fas fa-map-marker-alt text-emerald-700 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs md:text-sm text-gray-900">Lokasi & Gedung Puskesmas</h4>
+                            <p class="text-[10px] text-gray-500">Desa Palimbang Sari, Kec. Haur Gading</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg transition shadow-sm flex items-center gap-1">
+                        <i class="fas fa-external-link-alt"></i> Peta
+                    </a>
+                </div>
+
+                <!-- Konten Ringkas: Foto Gedung & Google Maps Diperkecil -->
+                <div class="grid grid-cols-2 gap-3 items-center">
+                    
+                    <!-- Foto Gedung (Diperkecil) -->
+                    <div class="space-y-1">
+                        <div class="w-full h-[120px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
+                            <img src="assets/gedung-puskesmas.jpg" 
+                                 alt="Gedung UPTD Puskesmas Haur Gading" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer"
+                                 onclick="window.open(this.src, '_blank')"
+                                 title="Klik untuk memperbesar foto gedung">
+                        </div>
+                        <p class="text-[9px] text-gray-500 text-center italic">Gedung Puskesmas</p>
+                    </div>
+
+                    <!-- Google Maps (Diperkecil) -->
+                    <div class="space-y-1">
+                        <div class="w-full h-[120px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8!2d115.1!3d-2.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMjQnMDAuMCJTIDExNcKwMDYnMDAuMCJF!5e0!3m2!1sid!2sid!4v1600000000000!5m2!1sid!2sid" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <p class="text-[9px] text-gray-500 text-center italic">Titik Lokasi Maps</p>
+                    </div>
+
+                </div>
+
+                <!-- Alamat Singkat -->
+                <div class="bg-emerald-50/50 p-2 rounded-xl border border-emerald-100 text-[11px] text-gray-700 flex items-center gap-2">
+                    <i class="fas fa-info-circle text-emerald-600 shrink-0"></i>
+                    <span>Jl. KH. M. Janawi RT. IV, Kab. Hulu Sungai Utara, Kalsel</span>
+                </div>
+
             </div>
-            <p class="text-[10px] text-gray-500 text-center italic">Gedung UPTD Puskesmas Haur Gading</p>
-        </div>
 
-        <!-- Google Maps Diperkecil (Sisi Kanan) -->
-        <div class="space-y-1.5">
-            <div class="w-full h-[150px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-                <!-- Iframe Google Maps dengan tinggi diperkecil -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8!2d115.1!3d-2.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMjQnMDAuMCJTIDExNcKwMDYnMDAuMCJF!5e0!3m2!1sid!2sid!4v1600000000000!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+
+            <!-- 2. KOTAK KANAN: LAYANAN INFORMASI & ADUAN (BERBANDING SEJAJAR) -->
+            <div class="bg-white p-5 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-4">
+                
+                <!-- Header Poster Aduan -->
+                <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
+                    <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200 p-1">
+                        <img src="assets/logo-puskesmas.png" 
+                             alt="Logo Puskesmas Haur Gading" 
+                             class="w-full h-full object-contain"
+                             onerror="this.src='https://via.placeholder.com/40?text=Logo'">
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xs md:text-sm text-gray-900">Layanan Informasi & Aduan</h4>
+                        <p class="text-[10px] text-gray-500">UPTD Puskesmas Haur Gading</p>
+                    </div>
+                </div>
+
+                <!-- Konten Banner Aduan & Barcode -->
+                <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-3.5 rounded-xl relative overflow-hidden shadow-inner flex items-center gap-3">
+                    
+                    <div class="space-y-1.5 flex-grow">
+                        <span class="bg-amber-400 text-emerald-950 text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full inline-block">
+                            <i class="fas fa-bullhorn"></i> Respon Cepat
+                        </span>
+                        <p class="text-[11px] text-emerald-100 leading-tight">
+                            Punya kritik, saran, atau kendala pelayanan? Sampaikan secara online.
+                        </p>
+                        <div class="text-[9px] text-amber-300 font-semibold flex items-center gap-1">
+                            <i class="fas fa-shield-alt"></i> Kerahasiaan pelapor terjamin
+                        </div>
+                    </div>
+
+                    <!-- Barcode -->
+                    <div class="bg-white p-1.5 rounded-xl shadow-md shrink-0 flex flex-col items-center justify-center border border-emerald-500/30">
+                        <img src="assets/barcode-pengaduan.png" 
+                             alt="Scan Barcode Pengaduan" 
+                             class="w-16 h-16 object-contain rounded-lg cursor-pointer"
+                             onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nufidd.github.io/puskesmas-haurgading.github.io/pengaduan.html'"
+                             onclick="window.open(this.src, '_blank')"
+                             title="Klik untuk memperbesar QR Code">
+                        <span class="text-[8px] font-bold text-emerald-900 mt-0.5 uppercase tracking-tighter">Scan Barcode</span>
+                    </div>
+
+                </div>
+
+                <!-- Tombol Aksi Cepat -->
+                <div class="grid grid-cols-2 gap-2.5 pt-0.5">
+                    <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-[11px] py-2.5 px-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
+                        <i class="fas fa-mobile-alt"></i> Antrean Online
+                    </a>
+                    <a href="pengaduan.html" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-[11px] py-2.5 px-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
+                        <i class="fas fa-comments"></i> Layanan Aduan
+                    </a>
+                </div>
+
             </div>
-            <p class="text-[10px] text-gray-500 text-center italic">Titik Lokasi Wilayah Kerja</p>
+
         </div>
 
     </div>
-
-    <!-- Alamat Lengkap Teks -->
-    <div class="bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100 text-xs text-gray-700 flex items-center gap-2">
-        <i class="fas fa-info-circle text-emerald-600 shrink-0"></i>
-        <span>Kec. Haur Gading, Kab. Hulu Sungai Utara, Kalimantan Selatan</span>
-    </div>
-
-</div>
-
-<!-- KARTU POSTER INFORMASI & LAYANAN PENGADUAN (DENGAN LOGO & BARCODE) -->
-<div class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col justify-between space-y-5">
-    
-    <!-- Header Poster Aduan (Logo Puskesmas & Judul) -->
-    <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
-        <!-- Logo Resmi Puskesmas -->
-        <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0 border border-emerald-200 p-1">
-            <img src="assets/logo-puskesmas.png" 
-                 alt="Logo Puskesmas Haur Gading" 
-                 class="w-full h-full object-contain"
-                 onerror="this.src='https://via.placeholder.com/40?text=Logo'">
-        </div>
-        <div>
-            <h4 class="font-bold text-sm text-gray-900">Layanan Informasi & Aduan</h4>
-            <p class="text-[11px] text-gray-500">UPTD Puskesmas Haur Gading</p>
-        </div>
-    </div>
-
-    <!-- Konten Poster (Desain Kartu Aduan) -->
-    <div class="bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-4 rounded-xl relative overflow-hidden shadow-inner flex flex-col sm:flex-row items-center gap-4">
-        
-        <!-- Info Teks Aduan -->
-        <div class="space-y-2 flex-grow text-center sm:text-left">
-            <span class="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
-                <i class="fas fa-bullhorn"></i> Respon Cepat
-            </span>
-            <p class="text-xs text-emerald-100 leading-relaxed">
-                Punya kritik, saran, atau kendala pelayanan? Sampaikan langsung kepada tim layanan pengaduan kami secara online.
-            </p>
-            <div class="text-[10px] text-amber-300 font-semibold flex items-center justify-center sm:justify-start gap-1 pt-1">
-                <i class="fas fa-shield-alt"></i> Kerahasiaan pelapor terjamin
-            </div>
-        </div>
-
-        <!-- Bagian Scan Barcode QR Code -->
-        <div class="bg-white p-2 rounded-xl shadow-md shrink-0 flex flex-col items-center justify-center border border-emerald-500/30">
-            <img src="assets/barcode-pengaduan.png" 
-                 alt="Scan Barcode Pengaduan Puskesmas" 
-                 class="w-20 h-20 object-contain rounded-lg cursor-pointer"
-                 onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nufidd.github.io/puskesmas-haurgading.github.io/pengaduan.html'"
-                 onclick="window.open(this.src, '_blank')"
-                 title="Klik untuk memperbesar QR Code">
-            <span class="text-[9px] font-bold text-emerald-900 mt-1 uppercase tracking-tighter">Scan Barcode</span>
-        </div>
-
-    </div>
-
-    <!-- Tombol Aksi Cepat Aduan -->
-    <div class="grid grid-cols-2 gap-3 pt-1">
-        <a href="pendaftaran.html" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold text-xs p-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
-            <i class="fas fa-mobile-alt"></i> Antrean Online
-        </a>
-        <a href="pengaduan.html" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs p-3 rounded-xl transition text-center shadow-sm flex items-center justify-center gap-1.5">
-            <i class="fas fa-comments"></i> Layanan Aduan
-        </a>
-    </div>
-
-</div>
 </section>
 
     <!-- 6. FOOTER / KONTAK -->

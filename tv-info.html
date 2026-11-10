@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi TV - UPTD Puskesmas Haur Gading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Animasi Running Text */
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+        /* Transisi halus antar slide */
+        .slide-fade {
+            transition: opacity 0.8s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white h-screen flex flex-col overflow-hidden select-none font-sans">
+
+    <!-- HEADER ATAS (Identitas & Jam Real-Time) -->
+    <header class="bg-emerald-800 border-b border-emerald-700 px-6 py-3 flex justify-between items-center shadow-lg z-20 shrink-0">
+        <div class="flex items-center space-x-4">
+            <img src="assets/logo-hsu.png" alt="Logo HSU" class="w-11 h-11 object-contain bg-white rounded-full p-1" onerror="this.style.display='none'">
+            <img src="assets/logo-puskesmas.png" alt="Logo Puskesmas" class="w-11 h-11 object-contain bg-white rounded-full p-1" onerror="this.style.display='none'">
+            <div>
+                <h1 class="font-extrabold text-lg md:text-2xl tracking-wide">UPTD PUSKESMAS HAUR GADING</h1>
+                <p class="text-xs text-emerald-200">Kabupaten Hulu Sungai Utara | Melayani dengan Senyum, Salam, Sapa</p>
+            </div>
+        </div>
+
+        <!-- Widget Tanggal & Jam -->
+        <div class="text-right bg-emerald-900/90 px-5 py-2 rounded-2xl border border-emerald-600/50 shadow-inner">
+            <div id="currentDate" class="text-xs md:text-sm font-medium text-amber-300">--</div>
+            <div id="currentTime" class="text-xl md:text-2xl font-black tracking-wider">00:00:00 WITA</div>
+        </div>
+    </header>
+
+    <!-- AREA SLIDESHOW GAMBAR FULL -->
+    <main class="relative flex-grow bg-gray-950 flex items-center justify-center p-4 overflow-hidden">
+
+        <!-- SLIDE 1 -->
+        <div class="slide absolute inset-4 flex items-center justify-center opacity-100 slide-fade">
+            <img src="assets/slide-1.jpg" alt="Slide 1" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl">
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide absolute inset-4 flex items-center justify-center opacity-0 pointer-events-none slide-fade">
+            <img src="assets/slide-2.jpg" alt="Slide 2" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl">
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide absolute inset-4 flex items-center justify-center opacity-0 pointer-events-none slide-fade">
+            <img src="assets/slide-3.jpg" alt="Slide 3" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl">
+        </div>
+
+        <!-- SLIDE 4 (Tambahkan atau hapus blok ini sesuai jumlah gambar Anda) -->
+        <div class="slide absolute inset-4 flex items-center justify-center opacity-0 pointer-events-none slide-fade">
+            <img src="assets/slide-4.jpg" alt="Slide 4" class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl">
+        </div>
+
+    </main>
+
+    <!-- FOOTER: RUNNING TEXT -->
+    <footer class="bg-emerald-950 border-t border-emerald-800 text-amber-300 py-2.5 px-4 flex items-center shadow-2xl z-20 overflow-hidden shrink-0">
+        <div class="bg-emerald-700 text-white font-bold text-xs uppercase px-4 py-1 rounded-lg shrink-0 mr-4 shadow">
+            <i class="fas fa-bullhorn mr-1"></i> Info Penting
+        </div>
+        <div class="overflow-hidden whitespace-nowrap w-full">
+            <p class="animate-marquee text-sm md:text-base font-semibold tracking-wide">
+                Selamat datang di UPTD Puskesmas Haur Gading. • Pastikan membawa kartu identitas (KTP/BPJS) dan Buku KIA untuk pelayanan anak. • Jaga kebersihan lingkungan puskesmas bersama. • Layanan Gawat Darurat buka sesuai jadwal operasional.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JAM & SLIDESHOW OTOMATIS -->
+    <script>
+        // 1. Jam & Tanggal Real-Time
+        function updateClock() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('currentDate').innerText = now.toLocaleDateString('id-ID', options);
+            
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('currentTime').innerText = `${hours}:${minutes}:${seconds} WITA`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // 2. Slideshow Otomatis (Ganti setiap 8 detik)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            if (totalSlides <= 1) return;
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0', 'pointer-events-none');
+            
+            currentSlide = (currentSlide + 1) % totalSlides;
+            
+            slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none');
+            slides[currentSlide].classList.add('opacity-100');
+        }
+
+        // Ubah angka 8000 (8 detik) jika ingin durasi tiap gambar lebih cepat/lambat
+        setInterval(showNextSlide, 8000);
+    </script>
+</body>
+</html>
